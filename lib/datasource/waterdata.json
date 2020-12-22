@@ -1,0 +1,7527 @@
+{
+	"region": {
+		"california": {
+			"code": "CA",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "American River",
+					"sites": [
+						{
+							"station": "11427000",
+							"name": "NF AMERICAN R A NORTH FORK DAM CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11427000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11446500",
+							"name": "AMERICAN R A FAIR OAKS CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11446500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "18010105",
+					"name": "Lower Eel",
+					"sites": [
+						{
+							"station": "11475000",
+							"name": "EEL R A FORT SEWARD CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11475000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11477000",
+							"name": "EEL R A SCOTIA CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11477000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11478500",
+							"name": "VAN DUZEN R NR BRIDGEVILLE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11478500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11479560",
+							"name": "EEL R A FERNBRIDGE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11479560",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "18010106",
+					"name": "South Fork Eel",
+					"sites": [
+						{
+							"station": "11475800",
+							"name": "SF EEL R A LEGGETT CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11475800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11476500",
+							"name": "SF EEL R NR MIRANDA CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11476500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "18010206",
+					"name": "Upper Klamath",
+					"sites": [
+						{
+							"station": "11516530",
+							"name": "KLAMATH R BL IRON GATE DAM CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11516530",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11520500",
+							"name": "KLAMATH R NR SEIAD VALLEY CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11520500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "18010206",
+					"name": "Lower Klamath",
+					"sites": [
+						{
+							"station": "11521500",
+							"name": "INDIAN C NR HAPPY CAMP CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11521500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11523000",
+							"name": "KLAMATH R A ORLEANS",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11523000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11530500",
+							"name": "KLAMATH R NR KLAMATH CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11530500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Pit River",
+					"sites": [
+						{
+							"station": "11348500",
+							"name": "PIT R NR CANBY CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11348500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11355010",
+							"name": "PIT R BL PIT NO 1 PH NR FALL RIVER MILLS CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11355010",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11355500",
+							"name": "HAT C NR HAT CREEK CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11355500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11361000",
+							"name": "BURNEY C A BURNEY FALLS NR BURNEY CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11361000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "18010110",
+					"name": "Russian River",
+					"sites": [
+						{
+							"station": "11462080",
+							"name": "RUSSIAN R NR TALMAGE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11462080",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11463000",
+							"name": "RUSSIAN R NR CLOVERDALE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11463000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11463500",
+							"name": "RUSSIAN R A GEYSERVILLE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11463500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11463980",
+							"name": "RUSSIAN R A DIGGER BEND NR HEALDSBURG CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11463980",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11465390",
+							"name": "RUSSIAN R NR WINDSOR CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11465390",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11467000",
+							"name": "RUSSIAN R NR GUERNEVILLE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11467000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": false,
+					"name": "Upper Sac",
+					"sites": [
+						{
+							"station": "11342000",
+							"name": "SACRAMENTO R A DELTA CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11342000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": false,
+					"name": "Lower Sac",
+					"sites": [
+						{
+							"station": "11370500",
+							"name": "SACRAMENTO R A KESWICK CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11370500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11377100",
+							"name": "SACRAMENTO R AB BEND BRIDGE NR RED BLUFF CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11377100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "18010101",
+					"name": "Smith River",
+					"sites": [
+						{
+							"station": "11532500",
+							"name": "SMITH R NR CRESCENT CITY CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11532500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "11532650",
+							"name": "SMITH R NR FORT DICK CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "11532650",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "16050102",
+					"name": "Truckee River",
+					"sites": [
+						{
+							"station": "10337500",
+							"name": "TRUCKEE R A TAHOE CITY CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10337500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10338000",
+							"name": "TRUCKEE R NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10338000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10338700",
+							"name": "DONNER C AT HWY 89 NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10338700",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10339410",
+							"name": "TRUCKEE R BL MARTIS C NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10339410",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10340500",
+							"name": "PROSSER C BL PROSSER C DAM NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10340500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10344500",
+							"name": "LITTLE TRUCKEE R BL BOCA DAM NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10344500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10344505",
+							"name": "TRUCKEE R A BOCA BRIDGE NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10344505",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10346000",
+							"name": "TRUCKEE R A FARAD CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10346000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"colorado": {
+			"code": "CO",
+			"watershed": [
+				{
+					"usgshuc": "14080104",
+					"name": "Animas",
+					"sites": [
+						{
+							"station": "09361500",
+							"name": "ANIMAS RIVER AT DURANGO, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09361500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09362520",
+							"name": "ANIMAS RIVER BLW DURANGO PUMP PLANT NR DURANGO, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09362520",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "11020001",
+					"name": "Arkansas Headwaters",
+					"sites": [
+						{
+							"station": "07081200",
+							"name": "ARKANSAS RIVER NEAR LEADVILLE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07081200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07083710",
+							"name": "ARKANSAS RIVER BELOW EMPIRE GULCH NEAR MALTA, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07083710",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07087050",
+							"name": "ARKANSAS RIVER BELOW GRANITE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07087050",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07091200",
+							"name": "ARKANSAS RIVER NEAR NATHROP, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07091200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "ARKSALCO",
+							"name": "ARKANSAS RIVER AT SALIDA",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "ARKSALCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "07094500",
+							"name": "ARKANSAS RIVER AT PARKDALE, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07094500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14010002",
+					"name": "Blue",
+					"sites": [
+						{
+							"station": "09050700",
+							"name": "BLUE RIVER BELOW DILLON, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09050700",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "GRERESCO",
+							"name": "GREEN MOUNTAIN RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "GRERESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "09057500",
+							"name": "BLUE RIVER BELOW GREEN MOUNTAIN RESERVOIR, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09057500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Boulder Creek",
+					"sites": [
+						{
+							"station": "GROSRECO",
+							"name": "GROSS RESERVOIR",
+							"geolocation": {
+								"longitude": "39.2093278",
+								"latitude": "-105.270197"
+							},
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "GROSRECO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "BOCBGRCO",
+							"name": "SOUTH BOULDER CREEK BELOW GROSS RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "BOCBGRCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "BOCMIDCO",
+							"name": "MIDDLE BOULDER CREEK AT NEDERLAND",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "BOCMIDCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": false,
+					"name": "Cache La Poudre",
+					"sites": [
+						{
+							"station": "CLAFTCCO",
+							"name": "CACHE LA POUDRE AT CANYON MOUTH NEAR FORT COLLINS",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "CLAFTCCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14010001",
+					"name": "Colorado Headwaters",
+					"sites": [
+						{
+							"station": "09019500",
+							"name": "COLORADO RIVER NEAR GRANBY, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09019500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09027100",
+							"name": "FRASER RIVER AT TABERNASH, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09027100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09034250",
+							"name": "COLORADO RIVER AT WINDY GAP, NEAR GRANBY, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09034250",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09038500",
+							"name": "WILLIAMS FORK BELOW WILLIAMS FORK RESERVOIR, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09038500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "COLPARCO",
+							"name": "COLORADO RIVER NEAR PARSHALL BELOW W.F. CONFLUENCE",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "COLPARCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "09058000",
+							"name": "COLORADO RIVER NEAR KREMMLING, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09058000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09057500",
+							"name": "BLUE RIVER BELOW GREEN MOUNTAIN RESERVOIR, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09057500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09060799",
+							"name": "COLORADO RIVER AT CATAMOUNT BRIDGE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09060799",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09070500",
+							"name": "COLORADO RIVER NEAR DOTSERO, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09070500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14030002",
+					"name": "Upper Dolores",
+					"sites": [
+						{
+							"station": "09165000",
+							"name": "DOLORES RIVER BELOW RICO, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09165000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09166500",
+							"name": "DOLORES RIVER AT DOLORES, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09166500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14020001",
+					"name": "East-Taylor",
+					"sites": [
+						{
+							"station": "TAYRESCO",
+							"name": "TAYLOR PARK RESERVOIR AT TAYLOR PARK, CO.",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "TAYRESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "09109000",
+							"name": "TAYLOR RIVER BELOW TAYLOR PARK RESERVOIR, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09109000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09110000",
+							"name": "TAYLOR RIVER AT ALMONT, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09110000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09112200",
+							"name": "EAST RIVER BELOW CEMENT CREEK NR CRESTED BUTTE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09112200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09112500",
+							"name": "EAST RIVER AT ALMONT, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09112500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "09064600",
+					"name": "Eagle",
+					"sites": [
+						{
+							"station": "09064600",
+							"name": "EAGLE RIVER NEAR MINTURN, CO ",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09064600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09066510",
+							"name": "GORE CREEK AT MOUTH NEAR MINTURN, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09066510",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09067020",
+							"name": "EAGLE R BLW WASTEWATER TREATMENT PLANT AT AVON, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09067020",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "394220106431500",
+							"name": "EAGLE RIVER BELOW MILK CREEK NEAR WOLCOTT, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "394220106431500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09070000",
+							"name": "EAGLE RIVER BELOW GYPSUM, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09070000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14020002",
+					"name": "Upper Gunnison",
+					"sites": [
+						{
+							"station": "09114500",
+							"name": "GUNNISON RIVER NEAR GUNNISON, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09114500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09126000",
+							"name": "CIMARRON RIVER NEAR CIMARRON, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09126000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "BLMRESCO",
+							"name": "BLUE MESA RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "BLMRESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "09128000",
+							"name": "GUNNISON RIVER BELOW GUNNISON TUNNEL, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09128000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "10180001",
+					"name": "North Platte Headwaters",
+					"sites": [
+						{
+							"station": "06620000",
+							"name": "NORTH PLATTE RIVER NEAR NORTHGATE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06620000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14010004",
+					"name": "Roaring Fork",
+					"sites": [
+						{
+							"station": "09073400",
+							"name": "ROARING FORK RIVER NEAR ASPEN, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09073400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "RUERESCO",
+							"name": "RUEDI RESERVOIR NEAR BASALT",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "RUERESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "09080400",
+							"name": "FRYINGPAN RIVER NEAR RUEDI, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09080400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09081000",
+							"name": "ROARING FORK RIVER NEAR EMMA, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09081000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09081600",
+							"name": "CRYSTAL RIVER ABV AVALANCHE CRK, NEAR REDSTONE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09081600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09085000",
+							"name": "ROARING FORK RIVER AT GLENWOOD SPRINGS, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09085000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14080101",
+					"name": "Upper San Juan",
+					"sites": [
+						{
+							"station": "09342500",
+							"name": "SAN JUAN RIVER AT PAGOSA SPRINGS, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09342500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09346400",
+							"name": "SAN JUAN RIVER NEAR CARRACAS, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09346400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "VALRESCO",
+							"name": "VALLECITO RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "VALRESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "09353800",
+							"name": "LOS PINOS RIVER NEAR IGNACIO, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09353800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14030003",
+					"name": "San Miguel",
+					"sites": [
+						{
+							"station": "09172500",
+							"name": "SAN MIGUEL RIVER NEAR PLACERVILLE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09172500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09174600",
+							"name": "SAN MIGUEL RIVER AT BROOKS BRIDGE NEAR NUCLA CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09174600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "10190002",
+					"name": "Upper South Platte",
+					"sites": [
+						{
+							"station": "PLAANTCO",
+							"name": "SOUTH PLATTE RIVER BELOW ANTERO RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "PLAANTCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},{
+							"station": "MFKBLMCO",
+							"name": "MIDDLE FORK SOUTH PLATTE BELOW MONTGOMERY RESERVOIR NEAR ALMA",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "MFKBLMCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},{
+							"station": "SPIRESCO",
+							"name": "SPINNEY MOUNTAIN RESERVOIR NEAR HARTSEL, CO",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "SPIRESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "PLAHARCO",
+							"name": "SOUTH PLATTE RIVER ABOVE ELEVENMILE RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "PLAHARCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "PLAGEOCO",
+							"name": "SOUTH PLATTE RIVER NEAR LAKE GEORGE",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "PLAGEOCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "06700000",
+							"name": "SOUTH PLATTE RIVER ABOVE CHEESMAN LAKE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06700000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "CHERESCO",
+							"name": "CHEESMAN RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "CHERESCO",
+									"parameter": "STORAGE",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "PLACHECO",
+							"name": "SOUTH PLATTE RIVER BELOW CHEESMAN RESERVOIR",
+							"geolocation": {
+								"longitude": "39.2093278",
+								"latitude": "-105.270197"
+							},
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "PLACHECO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "06701900",
+							"name": "SOUTH PLATTE RIVER BLW BRUSH CRK NEAR TRUMBULL, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06701900",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "ROBTUNCO",
+							"name": "ROBERTS TUNNEL AT EAST PORTAL NEAR GRANT",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "ROBTUNCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "PLABAICO",
+							"name": "NORTH FORK SOUTH PLATTE RIVER AT BAILEY",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "PLABAICO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "PLASTRCO",
+							"name": "SOUTH PLATTE RIVER BELOW STRONTIA SPRINGS",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "PLASTRCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "BTBLESCO",
+							"name": "BIG THOMPSON RIVER BELOW LAKE ESTES",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "BTBLESCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14020006",
+					"name": "Uncompahgre",
+					"sites": [
+						{
+							"station": "09146200",
+							"name": "UNCOMPAHGRE RIVER NEAR RIDGWAY, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09146200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09147022",
+							"name": "RIDGWAY RESERVOIR NEAR RIDGWAY, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09147022",
+									"period": "P7D",
+									"parameterCd": [
+										"00054"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09147025",
+							"name": "UNCOMPAHGRE RIVER BELOW RIDGWAY RESERVOIR, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09147025",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14050005",
+					"name": "Upper White",
+					"sites": [
+						{
+							"station": "09304200",
+							"name": "WHITE RIVER ABOVE COAL CREEK NEAR MEEKER, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09304200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09304500",
+							"name": "WHITE RIVER NEAR MEEKER, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09304500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09304800",
+							"name": "WHITE RIVER BELOW MEEKER, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09304800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": "14050001",
+					"name": "Upper Yampa",
+					"sites": [
+						{
+							"station": "09237500",
+							"name": "YAMPA RIVER BELOW STAGECOACH RESERVOIR, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09237500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09240020",
+							"name": "YAMPA RIVER BELOW SODA CREEK AT STEAMBOAT SPGS, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09240020",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09242500",
+							"name": "ELK RIVER NEAR MILNER, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09242500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09244490",
+							"name": "YAMPA RIVER ABOVE ELKHEAD CREEK NEAR HAYDEN, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09244490",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09247600",
+							"name": "YAMPA RIVER BELOW CRAIG, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09247600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"idaho": {
+			"code": "ID",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Blackfoot River",
+					"sites": [
+						{
+							"station": "13063000",
+							"name": "BLACKFOOT RIVER AB RESERVOIR NR HENRY ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13063000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13066000",
+							"name": "BLACKFOOT RIVER NR SHELLEY ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13066000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13068300",
+							"name": "BLACKFOOT RIVER BELOW NORTH CANAL AT BLACKFOOT ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13068300",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13068500",
+							"name": "BLACKFOOT RIVER NR BLACKFOOT ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13068500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Big Wood River",
+					"sites": [
+						{
+							"station": "13135500",
+							"name": "BIG WOOD RIVER NR KETCHUM ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13135500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13138000",
+							"name": "EAST FORK BIG WOOD RIVER AT GIMLET ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13138000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13139510",
+							"name": "BIG WOOD RIVER AT HAILEY ID TOTAL FLOW",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13139510",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13140335",
+							"name": "BIG WOOD R AT S BROADFORD BRIDGE NR BELLEVUE, ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13140335",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13141500",
+							"name": "CAMAS CREEK NR BLAINE ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13141500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13142500",
+							"name": "BIG WOOD RIVER BL MAGIC DAM NR RICHFIELD ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13142500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13148500",
+							"name": "LITTLE WOOD RIVER NR CAREY ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13148500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13148500",
+							"name": "LITTLE WOOD RIVER NR CAREY ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13148500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "South Fork Boise River",
+					"sites": [
+						{
+							"station": "13186000",
+							"name": "SF BOISE RIVER NR FEATHERVILLE ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13186000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13190500",
+							"name": "SF BOISE RIVER AT ANDERSON RANCH DAM ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13190500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13192200",
+							"name": "SF BOISE RIVER AT NEAL BRIDGE NR ARROWROCK DAM ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13192200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Clearwater River Basin",
+					"sites": [
+						{
+							"station": "13340000",
+							"name": "CLEARWATER RIVER AT OROFINO ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13340000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13341000",
+							"name": "NORTH FORK CLEARWATER RIVER AT AHSAHKA, ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13341000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13341050",
+							"name": "CLEARWATER RIVER NR PECK ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13341050",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13341570",
+							"name": "POTLATCH RIVER BEL LITTLE POTLATCH CR NR SPALDING",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13341570",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13343000",
+							"name": "CLEARWATER RIVER NEAR LEWISTON, ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13343000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Henrys Fork Basin",
+					"sites": [
+						{
+							"station": "13041010",
+							"name": "HENRYS FORK BLW COFFEE POT RAPIDS NR MACKS INN ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13041010",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13039000",
+							"name": "HENRYS LAKE NR LAKE ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13039000",
+									"period": "P7D",
+									"parameterCd": [
+										"00054"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13042500",
+							"name": "HENRYS FORK NR ISLAND PARK ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13042500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13046000",
+							"name": "HENRYS FORK NR ASHTON ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13046000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13049500",
+							"name": "FALL RIVER NR CHESTER ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13049500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13050500",
+							"name": "HENRYS FORK AT ST ANTHONY ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13050500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13055000",
+							"name": "TETON RIVER NR ST ANTHONY ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13055000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13056500",
+							"name": "HENRYS FORK NR REXBURG ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13056500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Salmon River Basin",
+					"sites": [
+						{
+							"station": "13296500",
+							"name": "SALMON RIVER BL YANKEE FORK NR CLAYTON ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13296500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13302005",
+							"name": "PAHSIMEROI RIVER AT ELLIS ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13302005",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13302500",
+							"name": "SALMON RIVER AT SALMON ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13302500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13305310",
+							"name": "LEMHI RIVER BELOW L5 DIVERSION NEAR SALMON, ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13305310",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13307000",
+							"name": "SALMON RIVER NR SHOUP ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13307000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13310199",
+							"name": "MF SALMON RIVER AT MOUTH NR SHOUP, ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13310199",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13310700",
+							"name": "SF SALMON RIVER NR KRASSEL RANGER STATION ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13310700",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13311000",
+							"name": "EF OF SF SALMON RIVER AT STIBNITE, ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13311000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13316500",
+							"name": "LITTLE SALMON RIVER AT RIGGINS ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13316500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13317000",
+							"name": "SALMON RIVER AT WHITE BIRD ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13317000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Upper Snake River Basin",
+					"sites": [
+						{
+							"station": "13032500",
+							"name": "SNAKE RIVER NR IRWIN ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13032500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13037500",
+							"name": "SNAKE RIVER NR HEISE ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13037500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13038500",
+							"name": "SNAKE RIVER AT LORENZO ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13038500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Middle Snake River Basin",
+					"sites": [
+						{
+							"station": "13057000",
+							"name": "SNAKE RIVER NR MENAN ID",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13057000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"louisiana": {
+			"code": "LA",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Atchafalaya River",
+					"sites": [
+						{
+							"station": "07381490",
+							"name": "Atchafalaya River at Simmesport, LA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07381490",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07381495",
+							"name": "(COE) Atchafalaya River at Melville, LA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07381495",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07381515",
+							"name": "Atchafalaya River at Butte La Rose, LA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07381515",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07381600",
+							"name": "Lower Atchafalaya River at Morgan City, LA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07381600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "073816525",
+							"name": "Mouth of Atchafalaya River at Atchafalaya Bay",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "073816525",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"michigan": {
+			"code": "MI",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Clinton River Basin",
+					"sites": [
+						{
+							"station": "04161000",
+							"name": "CLINTON RIVER AT AUBURN HILLS, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04161000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04161540",
+							"name": "PAINT CREEK AT ROCHESTER, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04161540",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04161820",
+							"name": "CLINTON RIVER AT STERLING HEIGHTS, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04161820",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04164000",
+							"name": "CLINTON RIVER NEAR FRASER, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04164000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04164500",
+							"name": "NORTH BRANCH CLINTON RIVER NEAR MT. CLEMENS, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04164500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04164800",
+							"name": "MIDDLE BRANCH CLINTON RIVER AT MACOMB, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04164800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04165500",
+							"name": "CLINTON RIVER AT MORAVIAN DRIVE AT MT. CLEMENS, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04165500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Au Sable River Basin",
+					"sites": [
+						{
+							"station": "04136000",
+							"name": "AU SABLE RIVER NEAR RED OAK, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04136000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04136500",
+							"name": "AU SABLE RIVER AT MIO, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04136500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04136900",
+							"name": "AU SABLE RIVER NEAR MC KINLEY, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04136900",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04137005",
+							"name": "AU SABLE RIVER NEAR CURTISVILLE, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04137005",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04137500",
+							"name": "AU SABLE RIVER NEAR AU SABLE, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04137500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Manistee River Basin",
+					"sites": [
+						{
+							"station": "04124000",
+							"name": "MANISTEE RIVER NEAR SHERMAN, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04124000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04124200",
+							"name": "MANISTEE RIVER NEAR MESICK, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04124200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04125460",
+							"name": "PINE RIVER AT HIGH SCHOOL BRIDGE NR HOXEYVILLE, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04125460",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04125550",
+							"name": "MANISTEE RIVER NEAR WELLSTON, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04125550",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Muskegon River Basin",
+					"sites": [
+						{
+							"station": "04121970",
+							"name": "MUSKEGON RIVER NEAR CROTON, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04121970",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04122001",
+							"name": "MUSKEGON RIVER AT BRIDGE STREET AT NEWAYGO, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04122001",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "04122025",
+							"name": "MUSKEGON RIVER AT BRIDGETON, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04122025",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Pere Marquette River Basin",
+					"sites": [
+						{
+							"station": "04122500",
+							"name": "PERE MARQUETTE RIVER AT SCOTTVILLE, MI",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04122500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"montana": {
+			"code": "MT",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Beaverhead River",
+					"sites": [
+						{
+							"station": "06016000",
+							"name": "Beaverhead River at Barretts MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06016000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06017000",
+							"name": "Beaverhead River at Dillon MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06017000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06023100",
+							"name": "Beaverhead River at Twin Bridges MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06023100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Big Hole River",
+					"sites": [
+						{
+							"station": "06023500",
+							"name": "Big Hole River near Jackson MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06023500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06023800",
+							"name": "Big Hole River ab Spring Creek nr Jackson MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06023800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06024450",
+							"name": "Big Hole River bl Big Lake Cr at Wisdom MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06024450",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06024580",
+							"name": "Big Hole River near Wise River MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06024580",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06025250",
+							"name": "Big Hole River at Maiden Rock nr Divide MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06025250",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06025500",
+							"name": "Big Hole River near Melrose MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06025500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06026210",
+							"name": "Big Hole River near Glen MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06026210",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06026420",
+							"name": "Big Hole R bl Hamilton Ditch nr Twin Bridges, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06026420",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Bighorn River",
+					"sites": [
+						{
+							"station": "06287000",
+							"name": "Bighorn River near St. Xavier, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06287000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06287800",
+							"name": "Bighorn River at bridge, at St. Xavier, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06287800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06288400",
+							"name": "Bighorn River at Two Leggins Bridge, near Hardin",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06288400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06294500",
+							"name": "Bighorn River ab Tullock Cr nr Bighorn MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06294500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Bitterroot River",
+					"sites": [
+						{
+							"station": "12344000",
+							"name": "Bitterroot River near Darby MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12344000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12350250",
+							"name": "Bitterroot River at Bell Crossing nr Victor MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12350250",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12352500",
+							"name": "Bitterroot River near Missoula MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12352500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Clark Fork",
+					"sites": [
+						{
+							"station": "12324200",
+							"name": "Clark Fork at Deer Lodge MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12324200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12324400",
+							"name": "Clark Fork ab Little Blackfoot R nr Garrison MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12324400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12331800",
+							"name": "Clark Fork near Drummond MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12324400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12334550",
+							"name": "Clark Fork at Turah Bridge nr Bonner MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12334550",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12340000",
+							"name": "Blackfoot River near Bonner MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12340000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12340500",
+							"name": "Clark Fork above Missoula MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12340500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12354700",
+							"name": "Clark Fork near Paradise, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12354700",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Clarks Fork River",
+					"sites": [
+						{
+							"station": "06207500",
+							"name": "Clarks Fork Yellowstone River nr Belfry MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06207500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06208500",
+							"name": "Clarks Fork Yellowstone River at Edgar MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06208500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Firehole River",
+					"sites": [
+						{
+							"station": "06036905",
+							"name": "Firehole River near West Yellowstone MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06036905",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06036905",
+							"name": "Firehole River near West Yellowstone MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06036905",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Gallatin River",
+					"sites": [
+						{
+							"station": "06043500",
+							"name": "Gallatin River near Gallatin Gateway, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06043500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06052500",
+							"name": "Gallatin River at Logan MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06052500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Jefferson River",
+					"sites": [
+						{
+							"station": "06026500",
+							"name": "Jefferson River near Twin Bridges MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06026500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06027600",
+							"name": "Jefferson River at Parsons Bdg nr Silver Star, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06027600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06036650",
+							"name": "Jefferson River near Three Forks MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06036650",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Madison River",
+					"sites": [
+						{
+							"station": "06037500",
+							"name": "Madison River near West Yellowstone, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06037500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06038500",
+							"name": "Madison River bl Hebgen Lake nr Grayling MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06038500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06038800",
+							"name": "Madison River at Kirby Ranch nr Cameron MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06038800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06040000",
+							"name": "Madison River near Cameron MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06040000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06040800",
+							"name": "Madison River ab powerplant nr McAllister MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06040800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06041000",
+							"name": "Madison River bl Ennis Lake nr McAllister MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06041000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Upper Missouri River Basin",
+					"sites": [
+						{
+							"station": "06054500",
+							"name": "Missouri River at Toston MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06054500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06065500",
+							"name": "Missouri River bl Hauser Dam near Helena MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06065500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06066500",
+							"name": "Missouri River bl Holter Dam nr Wolf Cr MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06066500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06074000",
+							"name": "Missouri River at Cascade MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06074000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06090000",
+							"name": "Missouri River at Great Falls MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06090000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Ruby River",
+					"sites": [
+						{
+							"station": "06019500",
+							"name": "Ruby River above reservoir near Alder, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06019500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06020600",
+							"name": "Ruby River below reservoir near Alder, MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06020600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06023000",
+							"name": "Ruby River near Twin Bridges MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06023000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Smith River",
+					"sites": [
+						{
+							"station": "06076690",
+							"name": "Smith River near Ft Logan MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06076690",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06077200",
+							"name": "Smith River bl Eagle Cr nr Fort Logan MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06077200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Yellowstone River Basin",
+					"sites": [
+						{
+							"station": "06186500",
+							"name": "Yellowstone River at Yellowstone Lk Outlet YNP",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06186500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06191500",
+							"name": "Yellowstone River at Corwin Springs MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06191500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06200000",
+							"name": "Boulder River at Big Timber MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06200000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06205000",
+							"name": "Stillwater River near Absarokee MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06205000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06214500",
+							"name": "Yellowstone River at Billings MT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06214500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"nevada": {
+			"code": "NV",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Bruneau River Basin",
+					"sites": [
+						{
+							"station": "13161500",
+							"name": "BRUNEAU RV AT ROWLAND, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13161500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Lake Tahoe",
+					"sites": [
+						{
+							"station": "10337000",
+							"name": "LAKE TAHOE A TAHOE CITY CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10337000",
+									"period": "P7D",
+									"parameterCd": [
+										"00065"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Truckee River",
+					"sites": [
+						{
+							"station": "10338000",
+							"name": "TRUCKEE R NR TRUCKEE CA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10338000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10347460",
+							"name": "TRUCKEE RV NR MOGUL, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10347460",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10348000",
+							"name": "TRUCKEE RV AT RENO, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10348000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10348200",
+							"name": "TRUCKEE RV NR SPARKS, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10348200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10349980",
+							"name": "STEAMBOAT CK AT CLEANWATER WAY NR RENO, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10349980",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10351600",
+							"name": "TRUCKEE RV BLW DERBY DAM NR WADSWORTH, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10351600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10351700",
+							"name": "TRUCKEE RV NR NIXON, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10351700",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Walker Lake Basin",
+					"sites": [
+						{
+							"station": "10293500",
+							"name": "E WALKER RV ABV STROSNIDER DITCH NR MASON, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10293500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10300000",
+							"name": "W WALKER RV NR HUDSON, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10300000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10300600",
+							"name": "WALKER RV NR MASON, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10300600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10302025",
+							"name": "WALKER RV NR MOUTH AT WALKER LAKE, NV",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10302025",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"new mexico": {
+			"code": "NM",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Cimarron River",
+					"sites": [
+						{
+							"station": "07206000",
+							"name": "CIMARRON RIVER BELOW EAGLE NEST DAM, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07206000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "07207000",
+							"name": "CIMARRON RIVER NEAR CIMARRON, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "07207000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Rio Chama",
+					"sites": [
+						{
+							"station": "08284100",
+							"name": "RIO CHAMA NEAR LA PUENTE, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08284100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08285500",
+							"name": "RIO CHAMA BELOW EL VADO DAM, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08285500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08287000",
+							"name": "RIO CHAMA BELOW ABIQUIU DAM, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08287000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Rio Grande Basin",
+					"sites": [
+						{
+							"station": "08263500",
+							"name": "RIO GRANDE NEAR CERRO, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08263500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08265000",
+							"name": "RED RIVER NEAR QUESTA, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08265000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08254000",
+							"name": "COSTILLA CREEK BELOW COSTILLA DAM, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08254000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08267500",
+							"name": "RIO HONDO NEAR VALDEZ, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08267500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08277470",
+							"name": "RIO PUEBLO NR PENASCO, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08277470",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08279500",
+							"name": "RIO GRANDE AT EMBUDO, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08279500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "San Juan River Basin",
+					"sites": [
+						{
+							"station": "09355500",
+							"name": "SAN JUAN RIVER NEAR ARCHULETA, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09355500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09363500",
+							"name": "ANIMAS RIVER NEAR CEDAR HILL, NM",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09363500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"new york": {
+			"code": "NY",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Batten Kill River",
+					"sites": [
+						{
+							"station": "01329490",
+							"name": "BATTEN KILL BELOW MILL AT BATTENVILLE NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01329490",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "West Canada Creek",
+					"sites": [
+						{
+							"station": "01343060",
+							"name": "WEST CANADA CREEK NEAR WILMURT NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01343060",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01346000",
+							"name": "WEST CANADA CREEK AT KAST BRIDGE NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01346000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Chittenango Creek",
+					"sites": [
+						{
+							"station": "04244000",
+							"name": "CHITTENANGO CREEK NEAR CHITTENANGO NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04244000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Cohocton Creek",
+					"sites": [
+						{
+							"station": "01527500",
+							"name": "COHOCTON RIVER AT AVOCA NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01527500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01528320",
+							"name": "COHOCTON RIVER AT BATH NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01528320",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01529500",
+							"name": "COHOCTON RIVER NEAR CAMPBELL NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01529500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "East Branch Deleware River",
+					"sites": [
+						{
+							"station": "01413500",
+							"name": "EAST BRANCH DELAWARE RIVER AT MARGARETVILLE NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01413500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01417500",
+							"name": "EAST BRANCH DELAWARE RIVER AT HARVARD NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01417500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01420500",
+							"name": "BEAVER KILL AT COOKS FALLS NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01420500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01421000",
+							"name": "EAST BRANCH DELAWARE RIVER AT FISHS EDDY NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01421000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "West Branch Deleware River",
+					"sites": [
+						{
+							"station": "01422500",
+							"name": "LITTLE DELAWARE RIVER NEAR DELHI NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01422500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01421900",
+							"name": "WEST BRANCH DELAWARE RIVER UPSTREAM FROM DELHI NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01421900",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01425000",
+							"name": "WEST BRANCH DELAWARE RIVER AT STILESVILLE NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01425000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01426500",
+							"name": "WEST BRANCH DELAWARE RIVER AT HALE EDDY NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01426500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Deleware River",
+					"sites": [
+						{
+							"station": "01427207",
+							"name": "DELAWARE RIVER AT LORDVILLE NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01427207",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01432110",
+							"name": "Lackawaxen River at Rowland, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01432110",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01433500",
+							"name": "MONGAUP RIVER NEAR MONGAUP NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01433500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01434000",
+							"name": "DELAWARE RIVER AT PORT JERVIS NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01434000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Ninemile Creek",
+					"sites": [
+						{
+							"station": "04240300",
+							"name": "NINEMILE CREEK AT LAKELAND NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04240300",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Salmon River",
+					"sites": [
+						{
+							"station": "04250200",
+							"name": "SALMON RIVER AT PINEVILLE NY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "04250200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"oregon": {
+			"code": "OR",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Chetco River",
+					"sites": [
+						{
+							"station": "14400000",
+							"name": "CHETCO RIVER NEAR BROOKINGS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14400000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Clackamas River",
+					"sites": [
+						{
+							"station": "14209500",
+							"name": "CLACKAMAS RIVER ABOVE THREE LYNX CREEK, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14209500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14210000",
+							"name": "CLACKAMAS RIVER AT ESTACADA, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14210000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14211010",
+							"name": "CLACKAMAS RIVER NEAR OREGON CITY, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14211010",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Crooked River",
+					"sites": [
+						{
+							"station": "14087380",
+							"name": "CROOKED RIVER BLW OSBORNE CANYON, NR OPAL CITY, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14087380",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14087400",
+							"name": "CROOKED RIVER BELOW OPAL SPRINGS, NEAR CULVER, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14087400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Deschutes River",
+					"sites": [
+						{
+							"station": "14076500",
+							"name": "DESCHUTES RIVER NEAR CULVER, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14076500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14092500",
+							"name": "DESCHUTES RIVER NEAR MADRAS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14092500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14103000",
+							"name": "DESCHUTES RIVER AT MOODY, NEAR BIGGS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14103000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "John Day River",
+					"sites": [
+						{
+							"station": "14038530",
+							"name": "JOHN DAY RIVER NEAR JOHN DAY, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14038530",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14044000",
+							"name": "MIDDLE FORK JOHN DAY RIVER AT RITTER, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14044000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14046000",
+							"name": "NORTH FORK JOHN DAY RIVER AT MONUMENT, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14046000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14046500",
+							"name": "JOHN DAY RIVER AT SERVICE CREEK, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14046500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14048000",
+							"name": "JOHN DAY RIVER AT MCDONALD FERRY, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14048000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Mckenzie River",
+					"sites": [
+						{
+							"station": "14158500",
+							"name": "MCKENZIE RIVER AT OUTLET OF CLEAR LAKE, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14319500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14158740",
+							"name": "MCKENZIE RIVER BL PAYNE CR, NR BELKNAP SPRINGS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14158740",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14158850",
+							"name": "MCKENZIE R BLW TRAIL BR DAM NR BELKNAP SPRINGS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14158850",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14159200",
+							"name": "SO FK MCKENZIE RIVER ABV COUGAR LAKE NR RAINBOW OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14159200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14159410",
+							"name": "COUGAR DAM TAILWATER NEAR RAINBOW, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14159410",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14159500",
+							"name": "SOUTH FORK MCKENZIE RIVER NEAR RAINBOW, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14159500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14162500",
+							"name": "MCKENZIE RIVER NEAR VIDA, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14162500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14163150",
+							"name": "MCKENZIE RIVER BLW LEABURG DAM, NR LEABURG, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14163150",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14163900",
+							"name": "MCKENZIE RIVER NEAR WALTERVILLE, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14163900",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14164900",
+							"name": "McKENZIE RIVER ABV HAYDEN BR, AT SPRINGFIELD,OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14164900",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14165000",
+							"name": "MOHAWK RIVER NEAR SPRINGFIELD, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14165000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14165500",
+							"name": "MCKENZIE RIVER NEAR COBURG, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14165500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Nehalem River",
+					"sites": [
+						{
+							"station": "14299800",
+							"name": "NEHALEM RIVER NEAR VERNONIA, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14299800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14301000",
+							"name": "NEHALEM RIVER NEAR FOSS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14301000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Northern Coatal Basin",
+					"sites": [
+						{
+							"station": "14301500",
+							"name": "WILSON RIVER NEAR TILLAMOOK, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14301500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14302020",
+							"name": "WILSON RIVER AT SOLLIE SMITH BR AT TILLAMOOK, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14302020",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14302480",
+							"name": "TRASK RIVER ABOVE CEDAR CREEK, NEAR TILLAMOOK, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14302480",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14303600",
+							"name": "NESTUCCA RIVER NEAR BEAVER, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14303600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14305500",
+							"name": "SILETZ RIVER AT SILETZ, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14305500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14306500",
+							"name": "ALSEA RIVER NEAR TIDEWATER, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14306500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14307620",
+							"name": "SIUSLAW RIVER NEAR MAPLETON, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14307620",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Owyhee River Basin",
+					"sites": [
+						{
+							"station": "13181000",
+							"name": "OWYHEE RIVER NR ROME OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13181000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13183000",
+							"name": "OWYHEE RIVER BELOW OWYHEE DAM, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13183000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Rogue River",
+					"sites": [
+						{
+							"station": "14330000",
+							"name": "ROGUE RIVER BELOW PROSPECT, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14330000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14332000",
+							"name": "SOUTH FORK ROGUE RIVER NEAR PROSPECT, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14332000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14337500",
+							"name": "BIG BUTTE CREEK NEAR MCLEOD, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14337500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14337600",
+							"name": "ROGUE RIVER NEAR MCLEOD, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14337600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14361500",
+							"name": "ROGUE RIVER AT GRANTS PASS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14361500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14369500",
+							"name": "APPLEGATE RIVER NEAR WILDERVILLE, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14369500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14372300",
+							"name": "ROGUE RIVER NEAR AGNESS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14372300",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Umpqua River",
+					"sites": [
+						{
+							"station": "14319500",
+							"name": "NORTH UMPQUA RIVER AT WINCHESTER, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14319500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14312000",
+							"name": "SOUTH UMPQUA RIVER NEAR BROCKWAY, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14312000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14321000",
+							"name": "UMPQUA RIVER NEAR ELKTON, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14321000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Willamette River",
+					"sites": [
+						{
+							"station": "14166000",
+							"name": "WILLAMETTE RIVER AT HARRISBURG, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14166000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14171600",
+							"name": "WILLAMETTE RIVER AT CORVALLIS, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14171600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14207770",
+							"name": "WILLAMETTE RIVER BELOW FALLS, AT OREGON CITY, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14207770",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14211720",
+							"name": "WILLAMETTE RIVER AT PORTLAND, OR",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14211720",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"pennsylvania": {
+			"code": "PA",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Fishing Creek Basin",
+					"sites": [
+						{
+							"station": "01539000",
+							"name": "Fishing Creek near Bloomsburg, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01539000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Oil Creek Basin",
+					"sites": [
+						{
+							"station": "03020500",
+							"name": "Oil Creek at Rouseville, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "03020500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Slippery Rock Creek at Wurtemburg, PA",
+					"sites": [
+						{
+							"station": "03106500",
+							"name": "Slippery Rock Creek at Wurtemburg, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "03106500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Spring Creek",
+					"sites": [
+						{
+							"station": "01546400",
+							"name": "Spring Creek at Houserville, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01546400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01547100",
+							"name": "Spring Creek at Milesburg, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01547100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Yellow Breeches Creek Basin",
+					"sites": [
+						{
+							"station": "01571500",
+							"name": "Yellow Breeches Creek near Camp Hill, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01571500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "01571184",
+							"name": "Mountain Creek near Pine Grove Furnace, PA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "01571184",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"tennessee": {
+			"code": "TN",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Watauga River",
+					"sites": [
+						{
+							"station": "03486000",
+							"name": "WATAUGA RIVER AT ELIZABETHTON, TENNESSEE",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "03486000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"texas": {
+			"code": "TX",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Guadalupe River Basin",
+					"sites": [
+						{
+							"station": "08167500",
+							"name": "Guadalupe Rv nr Spring Branch, TX",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08167500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08170800",
+							"name": "Blanco Rv at Crabapple Rd nr Blanco, TX",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08170800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08171000",
+							"name": "Blanco Rv at Crabapple Rd nr Blanco, TX",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08171000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08167800",
+							"name": "Guadalupe Rv at Sattler, TX",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08167800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "08168500",
+							"name": "Guadalupe Rv abv Comal Rv at New Braunfels, TX",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "08168500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"utah": {
+			"code": "UT",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Green River",
+					"sites": [
+						{
+							"station": "09234500",
+							"name": "GREEN RIVER NEAR GREENDALE, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09234500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Logan River",
+					"sites": [
+						{
+							"station": "10109000",
+							"name": "LOGAN RIVER ABOVE STATE DAM, NEAR LOGAN, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10109000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Provo River",
+					"sites": [
+						{
+							"station": "10154200",
+							"name": "PROVO RIVER NEAR WOODLAND, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10154200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10155000",
+							"name": "PROVO RIVER NEAR HAILSTONE, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10155000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10155500",
+							"name": "PROVO RIVER NEAR CHARLESTON, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10155500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10163000",
+							"name": "PROVO RIVER AT PROVO, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10163000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "USGS Great Basin",
+					"sites": [
+						{
+							"station": "10149400",
+							"name": "DIAMOND FORK ABV RED HOLLOW NR THISTLE, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10149400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "10164500",
+							"name": "AMERICAN FK AB UPPER POWERPLANT NR AMERICAN FK, UT",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "10164500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"washington": {
+			"code": "WA",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Cedar River Basin",
+					"sites": [
+						{
+							"station": "12116500",
+							"name": "CEDAR RIVER AT CEDAR FALLS, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12116500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12117500",
+							"name": "CEDAR RIVER NEAR LANDSBURG, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12117500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12117600",
+							"name": "CEDAR RIVER BELOW DIVERSION NEAR LANDSBURG, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12117600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12118500",
+							"name": "ROCK CREEK NEAR MAPLE VALLEY, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12118500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12119000",
+							"name": "CEDAR RIVER AT RENTON, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12119000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Cowlitz River Basin",
+					"sites": [
+						{
+							"station": "14238000",
+							"name": "COWLITZ RIVER BELOW MAYFIELD DAM, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14238000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14240525",
+							"name": "NF TOUTLE RIVER BELOW SRS NEAR KID VALLEY, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14240525",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14242580",
+							"name": "TOUTLE RIVER AT TOWER ROAD NEAR SILVER LAKE, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14242580",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14243000",
+							"name": "COWLITZ RIVER AT CASTLE ROCK, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14243000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Olympic Peninsula River Basins",
+					"sites": [
+						{
+							"station": "12043015",
+							"name": "BOGACHIEL RIVER NEAR LA PUSH, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12043015",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12045500",
+							"name": "ELWHA RIVER AT MCDONALD BR NEAR PORT ANGELES, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12045500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12041200",
+							"name": "HOH RIVER AT US HIGHWAY 101 NEAR FORKS, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12041200",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Skagit River Basin",
+					"sites": [
+						{
+							"station": "12178100",
+							"name": "NEWHALEM CREEK NEAR NEWHALEM, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12178100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12181000",
+							"name": "SKAGIT RIVER AT MARBLEMOUNT, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12181000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12179900",
+							"name": "BACON CREEK BELOW OAKES CREEK NEAR MARBLEMOUNT, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12179900",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12182500",
+							"name": "CASCADE RIVER AT MARBLEMOUNT, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12182500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12184700",
+							"name": "SKAGIT RIVER NEAR ROCKPORT, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12184700",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12189500",
+							"name": "SAUK RIVER NEAR SAUK, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12189500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12193400",
+							"name": "BAKER RIVER AT HENRY THOMPSON BR AT CONCRETE, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12193400",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12194000",
+							"name": "SKAGIT RIVER NEAR CONCRETE, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12194000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12199000",
+							"name": "SKAGIT RIVER NEAR SEDRO WOOLLEY, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12199000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12200500",
+							"name": "SKAGIT RIVER NEAR MOUNT VERNON, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12200500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Yakima River Basin",
+					"sites": [
+						{
+							"station": "12484500",
+							"name": "YAKIMA RIVER AT UMTANUM, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12484500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "14240525",
+							"name": "NF TOUTLE RIVER BELOW SRS NEAR KID VALLEY, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "14240525",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12488500",
+							"name": "AMERICAN RIVER NEAR NILE, WAA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12488500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12500450",
+							"name": "YAKIMA RIVER ABOVE AHTANUM CREEK AT UNION GAP, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12500450",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "12502500",
+							"name": "AHTANUM CREEK AT UNION GAP, WA",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "12502500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"wyoming": {
+			"code": "WY",
+			"watershed": [
+				{
+					"usgshuc": null,
+					"name": "Bighorn River Basin",
+					"sites": [
+						{
+							"station": "06268600",
+							"name": "BIGHORN RIVER AT WORLAND, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06268600",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06274300",
+							"name": "BIGHORN RIVER AT BASIN, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06274300",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06279500",
+							"name": "BIGHORN RIVER AT KANE, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06279500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06285100",
+							"name": "SHOSHONE RIVER NEAR LOVELL, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06285100",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Platte River Basin",
+					"sites": [
+						{
+							"station": "06620000",
+							"name": "NORTH PLATTE RIVER NEAR NORTHGATE, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06620000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06625000",
+							"name": "ENCAMPMENT RIVER AT MOUTH, NEAR ENCAMPMENT, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06625000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06660000",
+							"name": "LARAMIE RIVER AT LARAMIE, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06660000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Snake River Basin",
+					"sites": [
+						{
+							"station": "13010065",
+							"name": "SNAKE RIVER AB JACKSON LAKE AT FLAGG RANCH WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13010065",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13011000",
+							"name": "SNAKE RIVER NR MORAN WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13011000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13013650",
+							"name": "SNAKE RIVER AT MOOSE, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13013650",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13015000",
+							"name": "GROS VENTRE RIVER AT ZENITH WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13015000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13018350",
+							"name": "FLAT CREEK BELOW CACHE CREEK, NEAR JACKSON, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13018350",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "13018750",
+							"name": "SNAKE RIVER BL FLAT CREEK NR JACKSON WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "13018750",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Wind River Basin",
+					"sites": [
+						{
+							"station": "06218500",
+							"name": "WIND RIVER NEAR DUBOIS, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06218500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06220800",
+							"name": "WIND RIVER ABOVE RED CREEK, NEAR DUBOIS, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06220800",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06228000",
+							"name": "WIND RIVER AT RIVERTON, WY",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06228000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				},
+				{
+					"usgshuc": null,
+					"name": "Yellowstone River Basin",
+					"sites": [
+						{
+							"station": "06186500",
+							"name": "Yellowstone River at Yellowstone Lk Outlet YNP",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06186500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06188000",
+							"name": "Lamar River nr Tower Ranger Station YNP",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06188000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06190540",
+							"name": "Boiling River at Mammoth,YNP",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06190540",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "06191000",
+							"name": "Gardner River near Mammoth, YNP",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "06191000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	}
+}

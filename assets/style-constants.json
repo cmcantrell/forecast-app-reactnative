@@ -1,0 +1,37 @@
+{
+    "colors": {
+        "darkGrey": "rgb(17,17,17)",
+        "medGrey": "rgb(80,80,80)",
+        "lightGrey": "rgb(180,180,180)",
+        "burntOrange": "rgb(209,129,51)",
+        "forestGreen": "rgb(35,55,35)",
+        "dangerRed": "rgb(193,39,45)",
+        "aqua" : "rgb(25,255,255)"
+    },
+    "borders": {
+        "borderColor": "rgb(120,120,120)",
+        "borderWidth": 1
+    },
+    "fonts": {
+        "bodyFontFamily": "pt-sans",
+        "headerFontFamily": "work-sans",
+        "bodyFontColor": "rgb(255,255,255)",
+        "noteFontColor": "rgb(180,180,180)"
+    },
+    "buttons" : {
+        "disabled": {
+            "opacity": 0.6,
+            "backgroundColor": "rgb(180,180,180)"
+        }
+    },
+    "waterdataCards" : {
+        "cardHeight" : 100,
+        "colors" : {
+            "green" : "rgb(0,146,69)",
+            "lightGreen" : "rgb(140,198,63)",
+            "yellow" : "rgb(251,176,59)",
+            "burntOrange" : "rgb(241,90,36)",
+            "red" : "rgb(193,39,45)"
+        }
+    }
+}
