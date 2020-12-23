@@ -164,6 +164,7 @@ const WaterdataCard = (props) => {
         }
         return (
             <View style={_styles}>
+                <Text style={styles.collapsableContentText}>{name}</Text>
                 {getGraph()}
                 <Text style={styles.graphSubText}>{subtext}</Text>
             </View>
@@ -417,10 +418,19 @@ const styles = StyleSheet.create({
         borderTopColor: styleConstants.borders.borderColor,
         borderTopWidth: styleConstants.borders.borderWidth
     },
+    collapsableContentText: {
+        paddingLeft: padding,
+        paddingRight: padding,
+        marginTop: 10,
+        marginBottom: 20,
+        fontSize: 16,
+        color: "rgba(25,255,255,0.6)",
+        textAlign: "center"
+    },
     graphSubText:{
         paddingLeft: padding,
         paddingRight: padding,
-        marginBottom: 20,
+        marginBottom: 40,
         fontSize: 11,
         color: "rgba(25,255,255,0.6)",
         textAlign: "center"

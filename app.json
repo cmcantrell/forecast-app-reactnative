@@ -36,7 +36,6 @@
         "backgroundColor": "#222"
       },
       "permissions": [
-        "ACCESS_FINE_LOCATION",
         "WRITE_EXTERNAL_STORAGE"
       ]
     }

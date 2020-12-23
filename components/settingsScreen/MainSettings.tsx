@@ -4,6 +4,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import LocationSettings from "./LocationSettings";
 import InfoSettings from "./InfoSettings";
+import PushNotificationSettings from "./PushNotificationSettings";
 import styleConstants from "../../assets/style-constants";
 
 export default function MainSettings() {
@@ -15,6 +16,7 @@ export default function MainSettings() {
             </View>
             <LocationSettings />
             <InfoSettings />
+            <PushNotificationSettings />
         </View>
     );
 }
