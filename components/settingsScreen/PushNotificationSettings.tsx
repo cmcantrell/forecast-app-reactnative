@@ -1,7 +1,7 @@
 "use strict";
 
 import React, { Component } from "react";
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import Collapsible from 'react-native-collapsible';
 import { Picker } from '@react-native-picker/picker';
 import { Ionicons } from '@expo/vector-icons';
@@ -24,18 +24,19 @@ class PushNotificationSettings extends Component {
     }
 
     _componentWillMount() {
-        getData(dataStorePushNotificationsKey).then((response)=>{
+        getData(dataStorePushNotificationsKey).then((response) => {
             if (response != null) {
                 let pushNotifications = JSON.parse(response);
-                if(pushNotifications != false && pushNotifications.constructor.name == "Array"){
-                    console.log("@componentwillmount.test",pushNotifications);
-                    this.setState({pushNotifications:pushNotifications});
+                if (pushNotifications != false && pushNotifications.constructor.name == "Array") {
+                    console.log("@_componentWillmount.pushNotificatons: ", pushNotifications);
+                    this.setState({ pushNotifications: pushNotifications });
                 }
             }
         });
     }
 
     toggleStatuesIndicator(status = false) {
+        console.log("@toggleStateusIndicator");
         switch (status) {
             case true:
                 this.setState({ transactionInProgress: true });
@@ -53,13 +54,18 @@ class PushNotificationSettings extends Component {
     }
 
     getWatershedPickerItems(region = null) {
+        if (region == null) {
+            return;
+        }
         let regionSource = getWatershedSource(Waterdata.region, region);
-        
         return this._getPickerItems(regionSource);
     }
 
-    getSitesSourceItems(region, watershed=null){
-        let sitesSource = getSitesSource(Waterdata.region[region],watershed);
+    getSitesSourceItems(region, watershed = null) {
+        if (region == null || watershed == null) {
+            return;
+        }
+        let sitesSource = getSitesSource(Waterdata.region[region], watershed);
         return this._getPickerItems(sitesSource);
     }
 
@@ -71,6 +77,7 @@ class PushNotificationSettings extends Component {
     }
 
     setIsCollapsedHandler(val) {
+        console.log("@setIsCollapsedHandler");
         if (typeof val !== "boolean") {
             val = false;
         }
@@ -78,40 +85,56 @@ class PushNotificationSettings extends Component {
     }
 
     addInst() {
+        console.log("@addInst");
         if (this.state.pushNotifications.constructor.name == "Array") {
-            let notificationsData = this.state.pushNotifications,
-                newNotification = {
-                    key: notificationsData.length,
-                    region: null,
-                    watershed: null,
-                    site: null,
-                    condition: null,
-                    value: null,
-                    repeat: null,
-                    limit: null,
-                    lastSent: null
-                }
+            this.toggleStatuesIndicator(true);
+            let notificationsData = this.state.pushNotifications;
+            let currentKeys = notificationsData.map((inst) => {
+                return inst.key;
+            });
+            let newKey = 0;
+            if(currentKeys.length > 0){
+                newKey = (Math.max(...currentKeys) + 1);
+            }
+            let newNotification = {
+                key: newKey,
+                region: null,
+                watershed: null,
+                site: null,
+                condition: null,
+                value: null,
+                repeat: null,
+                limit: null,
+                lastSent: null
+            }
             notificationsData.push(newNotification);
-            this.setState({ pushNotifications: notificationsData });
+            setTimeout(() => {
+                this.toggleStatuesIndicator(false);
+                this.setState({ pushNotifications: notificationsData });
+            }, 1000);
         }
     }
 
     getAllInsts() {
+        console.log("@getAllInsts");
         if (this.state.pushNotifications.constructor.name == "Array") {
             let notificationsData = this.state.pushNotifications;
+            // console.log("@getAllInsts.notificationsData", notificationsData);
             let rows = notificationsData.map((inst, i) => {
-                return this.getInst(inst, i);
+                return this.getInst(inst, inst.key);
             });
             return rows;
         }
     }
 
     updateInst(data, changedData) {
+        console.log("@updateInst.notifications^", this.state.pushNotifications);
         let allNotifications = this.state.pushNotifications,
             key = data.key,
             notification = allNotifications.find((inst) => {
                 return inst.key == key;
             });
+        console.log("@updateInst.notification",key,notification);
         if (typeof changedData == "object") {
             for (let prop in changedData) {
                 if (changedData.hasOwnProperty(prop)) {
@@ -121,40 +144,77 @@ class PushNotificationSettings extends Component {
                 }
             }
         }
-        allNotifications[key] = notification;
-        // console.log("@updateInst.notification", notification);
+        // allNotifications[key] = notification;
+        allNotifications.splice(allNotifications.indexOf(notification),1,notification);
+        console.log("@updateInst.notification$", allNotifications);
         this.setState({ pushNotifications: allNotifications });
     }
 
-    saveInsts() {
-        console.log("@PushNoticationSettings.saveInsts.pushNotifications", this.state.pushNotifications);
+    saveInsts(data = null) {
+        console.log("@saveInst");
+        let pushNotifications = this.state.pushNotifications;
+        if (data != null && data.constructor.name == "array") {
+            pushNotifications = data;
+        }
+        // console.log("@PushNoticationSettings.saveInsts.pushNotifications", pushNotifications);
         this.toggleStatuesIndicator(true);
-        setData(dataStorePushNotificationsKey,JSON.stringify(this.state.pushNotifications)).then((response)=>{
-            this.setState({pushNotifications: this.state.pushNotifications});
+        setData(dataStorePushNotificationsKey, JSON.stringify(pushNotifications)).then((response) => {
             setTimeout(() => {
                 this.toggleStatuesIndicator(false);
+                this.setState({ pushNotifications: pushNotifications });
             }, 1000);
         });
     }
 
     deleteInst(key) {
-        console.log("@deleteInst",this.state.pushNotifications[key]);
-        let pushNotifications = this.state.pushNotifications;
-        if(pushNotifications[key] != undefined){
-            pushNotifications = pushNotifications.splice(key, 1);
-            this.saveInsts();
-        }
+        console.log("@deleteInst",key);
+        Alert.alert(
+            "Are You Sure?",
+            "You about to remove this notification, remove?",
+            [{
+                text: "No",
+                onPress: () => console.log("Cancel Pressed"),
+                style: "cancel"
+            }, {
+                text: "Remove", onPress: () => {
+                    let pushNotifications = this.state.pushNotifications;
+                    let notification = pushNotifications.find((_notification)=>{
+                        return _notification.key == key;
+                    });
+                    let index = pushNotifications.indexOf(notification);
+                    if (pushNotifications[index] != undefined) {
+                        this.toggleStatuesIndicator(true);
+                        pushNotifications.splice(index, 1);
+                        this.saveInsts(pushNotifications);
+                    }
+                }
+            }],
+            { cancelable: false }
+        );
+
+
     }
 
     getInst(data, key) {
-        // console.log(key, data);
-        let inStateInst = this.state.pushNotifications[data.key];
+        console.log("@getInst");
+        // let inStateInst = this.state.pushNotifications[data.key];
+        let inStateInst = this.state.pushNotifications.find((inst) => {
+            // console.log("in your loop", key, (inst.key==key), inst);
+            return inst.key == key;
+        });
+        // console.log(typeof inStateInst, inStateInst)
+        if (typeof inStateInst != "object") {
+            // console.log("ERROR: @getInst.inStateInst",inStateInst,);
+            // console.log("additional", data);
+            return;
+        }
+        // console.log("Success: @getInst.inStateInst",inStateInst);
         return (
             <View className="pushnotification-inst-container" key={key}>
                 <Text style={{ color: "#fff" }}>This is an inst {data.key}</Text>
-                
+
                 <Picker
-                    selectedValue={inStateInst.region}
+                    selectedValue={inStateInst.region || null}
                     style={{ height: 120 }}
                     itemStyle={{ height: 120 }}
                     onValueChange={(val, i) => {
@@ -164,9 +224,9 @@ class PushNotificationSettings extends Component {
                     <Picker.Item label="-- select a region --" value={null} color={"white"} />
                     {this.getRegionPickerItems()}
                 </Picker>
-                
+
                 <Picker
-                    selectedValue={inStateInst.watershed}
+                    selectedValue={inStateInst.watershed || null}
                     style={{ height: 120 }}
                     itemStyle={{ height: 120 }}
                     onValueChange={(val, i) => {
@@ -176,9 +236,9 @@ class PushNotificationSettings extends Component {
                     <Picker.Item label="-- select a watershed --" value={null} color={"white"} />
                     {this.getWatershedPickerItems(inStateInst.region)}
                 </Picker>
-                
+
                 <Picker
-                    selectedValue={inStateInst.site}
+                    selectedValue={inStateInst.site || null}
                     style={{ height: 120 }}
                     itemStyle={{ height: 120 }}
                     onValueChange={(val, i) => {
@@ -190,7 +250,7 @@ class PushNotificationSettings extends Component {
                 </Picker>
 
                 <Picker
-                    selectedValue={inStateInst.condition}
+                    selectedValue={inStateInst.condition || null}
                     style={{ height: 120 }}
                     itemStyle={{ height: 120 }}
                     onValueChange={(val, i) => {
@@ -202,7 +262,7 @@ class PushNotificationSettings extends Component {
                     <Picker.Item label="greater than" value={">"} color={"#fff"} />
                     <Picker.Item label="less than" value={"<"} color={"#fff"} />
                 </Picker>
-                
+
                 <TextInput
                     style={{
                         height: 42,
@@ -227,7 +287,7 @@ class PushNotificationSettings extends Component {
                     underlayColor={styleConstants.colors.burntOrange} >
                     <Text style={styles.buttonText}>Save Notification</Text>
                 </TouchableOpacity>
-                
+
                 <TouchableOpacity
                     style={styles.buttonDanger}
                     onPress={() => {
