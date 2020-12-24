@@ -28,7 +28,7 @@ class PushNotificationSettings extends Component {
             if (response != null) {
                 let pushNotifications = JSON.parse(response);
                 if (pushNotifications != false && pushNotifications.constructor.name == "Array") {
-                    console.log("@_componentWillmount.pushNotificatons: ", pushNotifications);
+                    // console.log("@_componentWillmount.pushNotificatons: ", pushNotifications);
                     this.setState({ pushNotifications: pushNotifications });
                 }
             }
@@ -36,7 +36,7 @@ class PushNotificationSettings extends Component {
     }
 
     toggleStatuesIndicator(status = false) {
-        console.log("@toggleStateusIndicator");
+        // console.log("@toggleStateusIndicator");
         switch (status) {
             case true:
                 this.setState({ transactionInProgress: true });
@@ -77,7 +77,7 @@ class PushNotificationSettings extends Component {
     }
 
     setIsCollapsedHandler(val) {
-        console.log("@setIsCollapsedHandler");
+        // console.log("@setIsCollapsedHandler");
         if (typeof val !== "boolean") {
             val = false;
         }
@@ -85,7 +85,7 @@ class PushNotificationSettings extends Component {
     }
 
     addInst() {
-        console.log("@addInst");
+        // console.log("@addInst");
         if (this.state.pushNotifications.constructor.name == "Array") {
             this.toggleStatuesIndicator(true);
             let notificationsData = this.state.pushNotifications;
@@ -116,10 +116,9 @@ class PushNotificationSettings extends Component {
     }
 
     getAllInsts() {
-        console.log("@getAllInsts");
+        // console.log("@getAllInsts");
         if (this.state.pushNotifications.constructor.name == "Array") {
             let notificationsData = this.state.pushNotifications;
-            // console.log("@getAllInsts.notificationsData", notificationsData);
             let rows = notificationsData.map((inst, i) => {
                 return this.getInst(inst, inst.key);
             });
@@ -128,13 +127,12 @@ class PushNotificationSettings extends Component {
     }
 
     updateInst(data, changedData) {
-        console.log("@updateInst.notifications^", this.state.pushNotifications);
+        // console.log("@updateInst.notifications^", this.state.pushNotifications);
         let allNotifications = this.state.pushNotifications,
             key = data.key,
             notification = allNotifications.find((inst) => {
                 return inst.key == key;
             });
-        console.log("@updateInst.notification",key,notification);
         if (typeof changedData == "object") {
             for (let prop in changedData) {
                 if (changedData.hasOwnProperty(prop)) {
@@ -144,19 +142,16 @@ class PushNotificationSettings extends Component {
                 }
             }
         }
-        // allNotifications[key] = notification;
         allNotifications.splice(allNotifications.indexOf(notification),1,notification);
-        console.log("@updateInst.notification$", allNotifications);
         this.setState({ pushNotifications: allNotifications });
     }
 
     saveInsts(data = null) {
-        console.log("@saveInst");
+        // console.log("@saveInst");
         let pushNotifications = this.state.pushNotifications;
         if (data != null && data.constructor.name == "array") {
             pushNotifications = data;
         }
-        // console.log("@PushNoticationSettings.saveInsts.pushNotifications", pushNotifications);
         this.toggleStatuesIndicator(true);
         setData(dataStorePushNotificationsKey, JSON.stringify(pushNotifications)).then((response) => {
             setTimeout(() => {
@@ -167,7 +162,7 @@ class PushNotificationSettings extends Component {
     }
 
     deleteInst(key) {
-        console.log("@deleteInst",key);
+        // console.log("@deleteInst",key);
         Alert.alert(
             "Are You Sure?",
             "You about to remove this notification, remove?",
@@ -196,19 +191,13 @@ class PushNotificationSettings extends Component {
     }
 
     getInst(data, key) {
-        console.log("@getInst");
-        // let inStateInst = this.state.pushNotifications[data.key];
+        // console.log("@getInst");
         let inStateInst = this.state.pushNotifications.find((inst) => {
-            // console.log("in your loop", key, (inst.key==key), inst);
             return inst.key == key;
         });
-        // console.log(typeof inStateInst, inStateInst)
         if (typeof inStateInst != "object") {
-            // console.log("ERROR: @getInst.inStateInst",inStateInst,);
-            // console.log("additional", data);
             return;
         }
-        // console.log("Success: @getInst.inStateInst",inStateInst);
         return (
             <View className="pushnotification-inst-container" key={key}>
                 <Text style={{ color: "#fff" }}>This is an inst {data.key}</Text>
