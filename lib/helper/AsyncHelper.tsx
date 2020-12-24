@@ -2,6 +2,8 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const dataStoreRegionKey = "@settings.savedregion";
+export const dataStoreWatershedKey = "@settings.savedwatershed";
+export const dataStorePushNotificationsKey = "@settings.savedPushSettings";
 
 /**
  * 
@@ -21,8 +23,6 @@ export const setData = async (key, data) => {
     }
     return false;
 };
-
-export const dataStoreWatershedKey = "@settings.savedwatershed";
 
 /**
  * 

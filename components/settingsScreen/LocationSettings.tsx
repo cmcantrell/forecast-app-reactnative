@@ -84,20 +84,15 @@ class LocationSettings extends Component {
     }
 
     toggleStatuesIndicator(status = false) {
-       
-            switch (status) {
-                case true:
-                    console.log("muthafuckas on")
-                    this.setState({ transactionInProgress: true });
-                    break;
-                case false:
-                default:
-                    console.log("muthafuckas off")
-                    this.setState({ transactionInProgress: false });
-                    break;
-            }
-        
-        
+        switch (status) {
+            case true:
+                this.setState({ transactionInProgress: true });
+                break;
+            case false:
+            default:
+                this.setState({ transactionInProgress: false });
+                break;
+        }
     }
 
     saveSettings() {
@@ -108,9 +103,9 @@ class LocationSettings extends Component {
                 let watershed = setData(dataStoreWatershedKey, this.state.selectedWatershed);
                 watershed.then((_res) => {
                     if (_res == true) {
-                        setTimeout(()=>{
+                        setTimeout(() => {
                             this.toggleStatuesIndicator(false);
-                        },1000);
+                        }, 1000);
                     }
                 });
             }
@@ -134,8 +129,8 @@ class LocationSettings extends Component {
                 <Spinner
                     visible={this.state.transactionInProgress}
                     textContent={'saving...'}
-                    textStyle={styles.spinnerTextStyle} 
-                    overlayColor="rgba(0,0,0,0.67)" 
+                    textStyle={styles.spinnerTextStyle}
+                    overlayColor="rgba(0,0,0,0.67)"
                 />
                 <View style={styles.settingGroupHeader}>
                     <Text style={styles.settingGroupHeaderTitle}>Set your default location.</Text>
