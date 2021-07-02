@@ -4,7 +4,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import LocationSettings from "./LocationSettings";
 import InfoSettings from "./InfoSettings";
-import PushNotificationSettings from "./PushNotificationSettings";
+// import PushNotificationSettings from "./PushNotificationSettings";
 import styleConstants from "../../assets/style-constants";
 
 export default function MainSettings() {
@@ -15,8 +15,8 @@ export default function MainSettings() {
                 <Text style={styles.screenTitle}>Settings</Text>
             </View>
             <LocationSettings />
+            {/* <PushNotificationSettings /> */}
             <InfoSettings />
-            <PushNotificationSettings />
         </View>
     );
 }

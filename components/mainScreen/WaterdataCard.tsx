@@ -36,9 +36,12 @@ const WaterdataCard = (props) => {
                                 currentMeasurementValue: null,
                                 currentMeasurementType: null,
                                 mapPoints: {},
-                                _72HrPercentageChange: null
+                                _72HrPercentageChange: null,
+                                percentageOfCapacity: null,
+                                capacity: null
                             },
                             currentData = null;
+                            console.log(parsedData);
                         if(typeof parsedData.map != "function"){
                             return setResponseData(responseData);
                         }
@@ -154,6 +157,7 @@ const WaterdataCard = (props) => {
      * 
      */
     const renderCollapsableContent = () => {
+        // console.log(responseData)
         let _styles = styles.bottomViewContainer;
         if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
             _styles = {..._styles, ...{height:100}}

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
@@ -8,14 +8,18 @@ import SettingsScreen from '../screens/SettingsScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 import styleConstants from "../assets/style-constants";
 
+// import * as notifications from "expo-notifications";
+// import * as Permissions from "expo-permissions";
+
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
+
   const colorScheme = useColorScheme();
 
   return (
-    <BottomTab.Navigator 
-      initialRouteName="Home" 
+    <BottomTab.Navigator
+      initialRouteName="Home"
       tabBarOptions={{
         activeTintColor: styleConstants.colors.burntOrange,
         inactiveTintColor: styleConstants.fonts.bodyFontColor,
@@ -23,9 +27,9 @@ export default function BottomTabNavigator() {
         activeBackgroundColor: styleConstants.colors.darkGrey,
         showLabel: false,
         style: {
-            backgroundColor: styleConstants.colors.darkGrey
+          backgroundColor: styleConstants.colors.darkGrey
         }
-    }} >
+      }} >
       <BottomTab.Screen
         name="Home"
         component={MainScreenNavigator}
@@ -54,13 +58,13 @@ function TabBarIcon(props: { name: string; color: string }) {
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const TabOneStack = createStackNavigator<TabOneParamList>();
 
-function MainScreenNavigator() {
+const MainScreenNavigator = function () {
   return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="Home"
         component={MainScreen}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
     </TabOneStack.Navigator>
   );
@@ -68,13 +72,13 @@ function MainScreenNavigator() {
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
-function SettingsScreenNavigator() {
+const SettingsScreenNavigator = function () {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
         name="Settings"
         component={SettingsScreen}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
     </TabTwoStack.Navigator>
   );

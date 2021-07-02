@@ -93,7 +93,7 @@ class PushNotificationSettings extends Component {
                 return inst.key;
             });
             let newKey = 0;
-            if(currentKeys.length > 0){
+            if (currentKeys.length > 0) {
                 newKey = (Math.max(...currentKeys) + 1);
             }
             let newNotification = {
@@ -103,9 +103,10 @@ class PushNotificationSettings extends Component {
                 site: null,
                 condition: null,
                 value: null,
-                repeat: null,
+                frequency: "7",
                 limit: null,
-                lastSent: null
+                lastSent: null,
+                lastReading: {}
             }
             notificationsData.push(newNotification);
             setTimeout(() => {
@@ -142,7 +143,7 @@ class PushNotificationSettings extends Component {
                 }
             }
         }
-        allNotifications.splice(allNotifications.indexOf(notification),1,notification);
+        allNotifications.splice(allNotifications.indexOf(notification), 1, notification);
         this.setState({ pushNotifications: allNotifications });
     }
 
@@ -173,7 +174,7 @@ class PushNotificationSettings extends Component {
             }, {
                 text: "Remove", onPress: () => {
                     let pushNotifications = this.state.pushNotifications;
-                    let notification = pushNotifications.find((_notification)=>{
+                    let notification = pushNotifications.find((_notification) => {
                         return _notification.key == key;
                     });
                     let index = pushNotifications.indexOf(notification);
@@ -199,13 +200,14 @@ class PushNotificationSettings extends Component {
             return;
         }
         return (
-            <View className="pushnotification-inst-container" key={key}>
-                <Text style={{ color: "#fff" }}>This is an inst {data.key}</Text>
+            <View style={styles.pushnotificationInstContainer} key={key}>
+
+                <Text style={styles.settingGroupHeaderNote}>Use the Pickers to select a station.</Text>
 
                 <Picker
                     selectedValue={inStateInst.region || null}
-                    style={{ height: 120 }}
-                    itemStyle={{ height: 120 }}
+                    style={styles.pickerStyles}
+                    itemStyle={styles.pickerItemStyles}
                     onValueChange={(val, i) => {
                         this.updateInst(data, { region: val });
                     }}
@@ -216,8 +218,8 @@ class PushNotificationSettings extends Component {
 
                 <Picker
                     selectedValue={inStateInst.watershed || null}
-                    style={{ height: 120 }}
-                    itemStyle={{ height: 120 }}
+                    style={styles.pickerStyles}
+                    itemStyle={styles.pickerItemStyles}
                     onValueChange={(val, i) => {
                         this.updateInst(data, { watershed: val });
                     }}
@@ -228,8 +230,8 @@ class PushNotificationSettings extends Component {
 
                 <Picker
                     selectedValue={inStateInst.site || null}
-                    style={{ height: 120 }}
-                    itemStyle={{ height: 120 }}
+                    style={styles.pickerStyles}
+                    itemStyle={styles.pickerItemStyles}
                     onValueChange={(val, i) => {
                         this.updateInst(data, { site: val });
                     }}
@@ -238,28 +240,24 @@ class PushNotificationSettings extends Component {
                     {this.getSitesSourceItems(inStateInst.region, inStateInst.watershed)}
                 </Picker>
 
+                <Text style={styles.settingGroupHeaderNote}>Set value & comparison parameters. If you would like to be notified when a station reaches 400ft3/s, select your station, set the condition to greater than & set the value to 400 & hit save.</Text>
+                <Text style={styles.settingGroupFieldLabel}>Set a Condition</Text>
                 <Picker
                     selectedValue={inStateInst.condition || null}
-                    style={{ height: 120 }}
-                    itemStyle={{ height: 120 }}
+                    style={styles.pickerStyles}
+                    itemStyle={styles.pickerItemStyles}
                     onValueChange={(val, i) => {
                         this.updateInst(data, { condition: val });
                     }}
                 >
                     <Picker.Item label="-- select a condition --" value={null} color={"#fff"} />
-                    <Picker.Item label="equal to" value={"="} color={"#fff"} />
                     <Picker.Item label="greater than" value={">"} color={"#fff"} />
                     <Picker.Item label="less than" value={"<"} color={"#fff"} />
                 </Picker>
 
+                <Text style={styles.settingGroupFieldLabel}>Set a Value</Text>
                 <TextInput
-                    style={{
-                        height: 42,
-                        borderColor: styleConstants.colors.medGrey,
-                        borderWidth: 1,
-                        color: "#fff",
-                        textAlign: "center"
-                    }}
+                    style={styles.textInput}
                     onChangeText={
                         (val) => {
                             this.updateInst(data, { value: val });
@@ -267,6 +265,21 @@ class PushNotificationSettings extends Component {
                     }
                     value={inStateInst.value}
                 ></TextInput>
+
+                <Text style={styles.settingGroupFieldLabel}>Notify me no more than</Text>
+                <Picker
+                    selectedValue={inStateInst.frequency || null}
+                    style={styles.pickerStyles}
+                    itemStyle={styles.pickerItemStyles}
+                    onValueChange={(val, i) => {
+                        this.updateInst(data, { frequency: val });
+                    }}
+                >
+                    <Picker.Item label="once a day" value={"1"} color={"#fff"} />
+                    <Picker.Item label="once a week" value={"7"} color={"#fff"} />
+                    <Picker.Item label="once a month" value={"30"} color={"#fff"} />
+                    <Picker.Item label="once a month" value={"30"} color={"#fff"} />
+                </Picker>
 
                 <TouchableOpacity
                     style={styles.button}
@@ -324,22 +337,16 @@ class PushNotificationSettings extends Component {
                     />
                 </View>
                 <Collapsible collapsed={this.state.isCollapsed}>
-                    <Text style={styles.settingGroupHeaderNote}>Set variable based push notifications{"\n"}</Text>
+                    <Text style={styles.settingGroupHeaderNote}>Set variable based push notifications. Press the "Add a Notification" button, use the pickers to select a guaging station. Select a condition & set a value, i.e. when station A is greater than 400, send a notification.</Text>
                     <View style={{ flexDirection: "row" }}>
-                        <Text style={styles.addInstText}
+                        <TouchableOpacity
+                            style={styles.button}
                             onPress={() => {
                                 this.addInst();
                             }}
-                        >Add a notifcation</Text>
-                        <Ionicons
-                            style={{ width: "10%", marginTop: -1 }}
-                            name="add"
-                            size={26}
-                            color="#fff"
-                            onPress={() => {
-                                this.addInst();
-                            }}
-                        />
+                            underlayColor={styleConstants.colors.burntOrange} >
+                            <Text style={styles.buttonText}>Add Notification</Text>
+                        </TouchableOpacity>
                     </View>
                     <View>
                         {this.getAllInsts()}
@@ -351,6 +358,9 @@ class PushNotificationSettings extends Component {
 
 }
 export default PushNotificationSettings;
+
+const notificationBoxElementWidth = "98%";
+const notificationBoxElementMarginLeft = "1%";
 
 const styles = StyleSheet.create({
     settingGroup: {
@@ -370,6 +380,15 @@ const styles = StyleSheet.create({
         fontSize: 21,
         fontWeight: 'bold'
     },
+    settingGroupFieldLabel: {
+        fontSize: 14,
+        fontFamily: styleConstants.fonts.bodyFontFamily,
+        color: styleConstants.fonts.noteFontColor,
+        marginTop: 10,
+        marginBottom: 5,
+        marginLeft: 10,
+        marginRight: 10
+    },
     settingGroupHeaderNote: {
         fontFamily: styleConstants.fonts.bodyFontFamily,
         color: styleConstants.fonts.noteFontColor,
@@ -387,9 +406,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     button: {
-        width: "100%",
+        width: notificationBoxElementWidth,
+        marginLeft: notificationBoxElementMarginLeft,
         alignSelf: 'stretch',
         marginTop: 10,
+        marginBottom: 20,
         paddingTop: 10,
         paddingBottom: 10,
         backgroundColor: styleConstants.colors.burntOrange,
@@ -398,7 +419,8 @@ const styles = StyleSheet.create({
         borderColor: styleConstants.fonts.bodyFontColor
     },
     buttonDanger: {
-        width: "100%",
+        width: notificationBoxElementWidth,
+        marginLeft: notificationBoxElementMarginLeft,
         alignSelf: 'stretch',
         marginTop: 10,
         paddingTop: 10,
@@ -422,6 +444,36 @@ const styles = StyleSheet.create({
     },
     addInstText: {
         fontSize: 21,
-        color: "#FFF"
+        color: styleConstants.colors.burntOrange,
+        marginBottom: 40
+    },
+    pushnotificationInstContainer: {
+        padding: notificationBoxElementMarginLeft,
+        backgroundColor: "#131313",
+        paddingBottom: 40,
+        marginBottom: 40,
+        borderRadius: 4,
+        borderColor: "#222",
+        borderStyle: "solid",
+        borderWidth: 1
+    },
+    textInput: {
+        width: "90%",
+        marginLeft: "5%",
+        marginBottom: 20,
+        height: 42,
+        borderColor: styleConstants.colors.medGrey,
+        borderWidth: 1,
+        color: "#fff",
+        textAlign: "center"
+    },
+    pickerStyles: {
+        height: 70,
+        width: notificationBoxElementWidth,
+        marginLeft: notificationBoxElementMarginLeft
+    },
+    pickerItemStyles: {
+        height: 70,
+        fontSize: 12
     }
 });

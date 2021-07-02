@@ -865,6 +865,9 @@
 									"format": "json",
 									"abbrev": "GRERESCO",
 									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 154600
+									},
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
@@ -1075,6 +1078,25 @@
 							}
 						},
 						{
+							"station": "GRERESCO",
+							"name": "GREEN MOUNTAIN RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "GRERESCO",
+									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 154600
+									},
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
 							"station": "09057500",
 							"name": "BLUE RIVER BELOW GREEN MOUNTAIN RESERVOIR, CO",
 							"service": {
@@ -1117,6 +1139,23 @@
 								"method": "get",
 								"params": {
 									"sites": "09070500",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "09085100",
+							"name": "COLORADO RIVER BELOW GLENWOOD SPRINGS, CO",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09085100",
 									"period": "P7D",
 									"parameterCd": [
 										"00060"
@@ -1397,6 +1436,9 @@
 									"format": "json",
 									"abbrev": "BLMRESCO",
 									"parameter": "STORAGE",
+									"capacity":{
+										"acft":940700
+									},
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
@@ -1425,6 +1467,22 @@
 					"usgshuc": "10180001",
 					"name": "North Platte Headwaters",
 					"sites": [
+						{
+							"station": "MICWLDCO",
+							"name": "MICHIGAN RIVER AT WALDEN, CO.",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "MICWLDCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
 						{
 							"station": "06620000",
 							"name": "NORTH PLATTE RIVER NEAR NORTHGATE, CO",
@@ -1683,22 +1741,40 @@
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
 							}
-						},{
-							"station": "MFKBLMCO",
-							"name": "MIDDLE FORK SOUTH PLATTE BELOW MONTGOMERY RESERVOIR NEAR ALMA",
+						},
+						{
+							"station": "PLASPICO",
+							"name": "SOUTH PLATTE RIVER ABOVE SPINNEY RESERVOIR",
 							"service": {
 								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
 								"service": "rest",
 								"method": "get",
 								"params": {
 									"format": "json",
-									"abbrev": "MFKBLMCO",
+									"abbrev": "PLASPICO",
 									"measType": "Streamflow",
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
 							}
-						},{
+						},
+						{
+							"station": "HOMSPICO",
+							"name": "AURORA HOMESTAKE PIPELINE TO SPINNEY RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "HOMSPICO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
 							"station": "SPIRESCO",
 							"name": "SPINNEY MOUNTAIN RESERVOIR NEAR HARTSEL, CO",
 							"service": {
@@ -1709,6 +1785,9 @@
 									"format": "json",
 									"abbrev": "SPIRESCO",
 									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 53651
+									},
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
@@ -1774,6 +1853,9 @@
 									"format": "json",
 									"abbrev": "CHERESCO",
 									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 79064
+									},
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
@@ -1916,7 +1998,10 @@
 									"parameterCd": [
 										"00054"
 									],
-									"format": "json"
+									"format": "json",
+									"capacity" : {
+										"acft":84410
+									}
 								}
 							}
 						},
@@ -2033,6 +2118,24 @@
 									"format": "json"
 								}
 							}
+						},{
+							"station": "STELAKCO",
+							"name": "STEAMBOAT LAKE",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "STELAKCO",
+									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 26364
+									},
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
 						},
 						{
 							"station": "09242500",
@@ -2082,6 +2185,22 @@
 										"00060"
 									],
 									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "YAMDEECO",
+							"name": "YAMPA RIVER AT DEERLODGE PARK, CO",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "YAMDEECO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
 								}
 							}
 						}
