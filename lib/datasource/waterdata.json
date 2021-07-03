@@ -1534,6 +1534,9 @@
 									"format": "json",
 									"abbrev": "RUERESCO",
 									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 102000
+									},
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}

@@ -41,16 +41,21 @@ const WaterdataCard = (props) => {
                                 capacity: null
                             },
                             currentData = null;
-                            console.log(parsedData);
-                        if(typeof parsedData.map != "function"){
+                        if (typeof parsedData.map != "function") {
                             return setResponseData(responseData);
                         }
+                        //console.log("parsedData",parsedData);
                         parsedData.map((d) => {
                             // get current timesSeries
                             if (Object.keys(d)[0] == "_0hr") {
                                 currentData = (d[Object.keys(d)[0]]);
+                                //console.log("currentData",currentData);
                                 responseData.currentMeasurementValue = currentData.measurementValue;
                                 responseData.currentMeasurementType = currentData.measurementType;
+                                if (responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") {
+                                    responseData.capacity = currentData.capacity || null;
+                                    responseData.percentageOfCapacity = currentData.percentageOfCapacity || null;
+                                }
                             }
                             if (Object.keys(d)[0] == "mapPoints") {
                                 responseData.mapPoints = (d[Object.keys(d)[0]]);
@@ -62,11 +67,11 @@ const WaterdataCard = (props) => {
                         setResponseData(responseData);
                     }).catch((err) => {
                         setResponseData({ error: err, request: apiData });
-                        console.log(err, apiData);
+                        console.log("ERROR1",err, apiData);
                     });
                 }).catch((err) => {
                     setResponseData({ error: err, request: apiData });
-                    console.log(err, apiData);
+                    console.log("ERROR2",err, apiData);
                 });
             }
         }
@@ -82,7 +87,7 @@ const WaterdataCard = (props) => {
                     responseData.currentMeasurementValue = `${((responseData.currentMeasurementValue / 1000).toFixed(1))}`;
                 }
                 let measurementType = responseData.currentMeasurementType;
-                if(measurementType == "acft"){
+                if (measurementType == "acft") {
                     measurementType = "Kacft";
                 }
                 return <View style={styles.currentMeasurementContainer}>
@@ -101,26 +106,35 @@ const WaterdataCard = (props) => {
 
     const renderChangeData = () => {
         if (!isNaN(responseData._72HrPercentageChange) && responseData._72HrPercentageChange !== null) {
-            let iconColor = getIconColor(responseData._72HrPercentageChange);
-            return <View style={styles.percentChangeContainer}>
-                <View style={styles.percentTextContainer}><Text style={{ ...styles.percentIconText, ...{ color: iconColor } }}>+/-</Text><Text style={styles.percentText}>{responseData._72HrPercentageChange}%72hrs.</Text></View>
-            </View>
-        }else if (responseData.currentMeasurementValue == undefined) {
+            if ((responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") && responseData.percentageOfCapacity != null) {
+                let iconColor = getIconColor(responseData.percentageOfCapacity);
+                return (
+                    <View style={styles.percentChangeContainer}>
+                        <View style={styles.percentTextContainer}><Text style={{ ...styles.percentIconText, ...{ color: iconColor } }}>+/-</Text><Text style={styles.percentText}>{responseData.percentageOfCapacity}%</Text></View>
+                    </View>)
+            } else {
+                let iconColor = getIconColor(responseData._72HrPercentageChange);
+                return (
+                    <View style={styles.percentChangeContainer}>
+                        <View style={styles.percentTextContainer}><Text style={{ ...styles.percentIconText, ...{ color: iconColor } }}>+/-</Text><Text style={styles.percentText}>{responseData._72HrPercentageChange}%72hrs.</Text></View>
+                    </View>);
+            }
+        } else if (responseData.currentMeasurementValue == undefined) {
             return (
                 <View style={styles.percentChangeContainer}>
-                    <View style={styles.percentTextContainer}><Text style={{...styles.percentText, ...styles.noReadingText}}>no read</Text></View>
+                    <View style={styles.percentTextContainer}><Text style={{ ...styles.percentText, ...styles.noReadingText }}>no read</Text></View>
                 </View>
             );
-        }else if(responseData.currentMeasurementValue == "Ssn"){
+        } else if (responseData.currentMeasurementValue == "Ssn") {
             return (
                 <View style={styles.percentChangeContainer}>
-                    <View style={styles.percentTextContainer}><Text style={{...styles.percentText, ...styles.noReadingText}}>Seasonal</Text></View>
+                    <View style={styles.percentTextContainer}><Text style={{ ...styles.percentText, ...styles.noReadingText }}>Seasonal</Text></View>
                 </View>
             );
-        }else if(responseData.currentMeasurementValue == "Bkw"){
+        } else if (responseData.currentMeasurementValue == "Bkw") {
             return (
                 <View style={styles.percentChangeContainer}>
-                    <View style={styles.percentTextContainer}><Text style={{...styles.percentText, ...styles.noReadingText}}>Backwater</Text></View>
+                    <View style={styles.percentTextContainer}><Text style={{ ...styles.percentText, ...styles.noReadingText }}>Backwater</Text></View>
                 </View>
             );
         }
@@ -128,16 +142,30 @@ const WaterdataCard = (props) => {
 
     const getIconColor = (intVal) => {
         intVal = Math.abs(intVal);
-        if (intVal < 10) {
-            return styleConstants.waterdataCards.colors.green;
-        } else if (intVal >= 10 && intVal < 20) {
-            return styleConstants.waterdataCards.colors.lightGreen;
-        } else if (intVal >= 20 && intVal < 30) {
-            return styleConstants.waterdataCards.colors.yellow;
-        } else if (intVal >= 40 && intVal < 50) {
-            return styleConstants.waterdataCards.colors.burntOrange;
-        } else if (intVal >= 50) {
-            return styleConstants.waterdataCards.colors.red;
+        if (isStorageValue()) {
+            if (intVal > 90) {
+                return styleConstants.waterdataCards.colors.green;
+            } else if (intVal <= 90 && intVal > 79) {
+                return styleConstants.waterdataCards.colors.lightGreen;
+            } else if (intVal <= 79 && intVal > 70) {
+                return styleConstants.waterdataCards.colors.yellow;
+            } else if (intVal <= 70 && intVal > 60) {
+                return styleConstants.waterdataCards.colors.burntOrange;
+            } else if (intVal <= 60) {
+                return styleConstants.waterdataCards.colors.red;
+            }
+        } else {
+            if (intVal < 10) {
+                return styleConstants.waterdataCards.colors.green;
+            } else if (intVal >= 10 && intVal < 20) {
+                return styleConstants.waterdataCards.colors.lightGreen;
+            } else if (intVal >= 20 && intVal < 30) {
+                return styleConstants.waterdataCards.colors.yellow;
+            } else if (intVal >= 40 && intVal < 50) {
+                return styleConstants.waterdataCards.colors.burntOrange;
+            } else if (intVal >= 50) {
+                return styleConstants.waterdataCards.colors.red;
+            }
         }
         return styleConstants.fonts.bodyFontColor;
     };
@@ -156,20 +184,55 @@ const WaterdataCard = (props) => {
     /**
      * 
      */
+    const isStorageValue = () => {
+        if (responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") {
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     */
+     const isValidStorageCapacityValue = () => {
+        if (isStorageValue() == true) {
+            if(responseData.capacity != null && responseData.percentageOfCapacity != null){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 
+     */
     const renderCollapsableContent = () => {
         // console.log(responseData)
         let _styles = styles.bottomViewContainer;
         if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
-            _styles = {..._styles, ...{height:100}}
+            _styles = { ..._styles, ...{ height: 100 } }
         }
         let subtext = `Values measured in ${responseData.currentMeasurementType}. Explanations for data terms can be found on the settings tab.`;
-        if(responseData.currentMeasurementValue == "Ssn"){
+        if (responseData.currentMeasurementValue == "Ssn") {
             subtext = `This is a Seasonally operated station, and is currently in the off-season.`;
+        }
+        let getSpecialValues = () => {
+            let specialValuesTxt = "";
+            if (isStorageValue() == true) {
+                //console.log(responseData);
+                if (isValidStorageCapacityValue() == true) {
+                    specialValuesTxt = `Current level is ${responseData.percentageOfCapacity}% of full pool at ${responseData.capacity}${responseData.currentMeasurementType}`
+                }
+            }
+            return (
+                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 14, fontStyle: "italic", marginTop: -5 } }}>{specialValuesTxt}</Text>
+            );
         }
         return (
             <View style={_styles}>
-                <Text style={styles.collapsableContentText}>{name}</Text>
+                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 17 } }}>{name}</Text>
                 {getGraph()}
+                {getSpecialValues()}
                 <Text style={styles.graphSubText}>{subtext}</Text>
             </View>
         );
@@ -221,13 +284,13 @@ const WaterdataCard = (props) => {
 
     const getCollapsibleLink = () => {
         if (responseData.currentMeasurementValue != undefined) {
-            return(
-                <Text style={{ 
-                    color: collapsabelIconColor, 
-                    fontSize: 18, 
+            return (
+                <Text style={{
+                    color: collapsabelIconColor,
+                    fontSize: 18,
                     fontFamily: styleConstants.fonts.bodyFontFamily
                 }}>expand</Text>
-            ); 
+            );
         }
     };
 
@@ -405,9 +468,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
         lineHeight: 36
     },
-    noReadingText:{
-        fontStyle:"italic",
-        color:styleConstants.colors.lightGrey
+    noReadingText: {
+        fontStyle: "italic",
+        color: styleConstants.colors.lightGrey
     },
     bottomViewContainer: {
         width: "100%",
@@ -431,7 +494,7 @@ const styles = StyleSheet.create({
         color: "rgba(25,255,255,0.6)",
         textAlign: "center"
     },
-    graphSubText:{
+    graphSubText: {
         paddingLeft: padding,
         paddingRight: padding,
         marginBottom: 40,
@@ -440,12 +503,12 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
     logsLink: {
-        color:"white",
-        paddingLeft:padding,
+        color: "white",
+        paddingLeft: padding,
         paddingRight: padding * 2,
         paddingBottom: padding * 2,
-        fontSize:18,
-        textAlign:"center"
+        fontSize: 18,
+        textAlign: "center"
     }
 });
 
