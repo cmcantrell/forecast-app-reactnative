@@ -1148,6 +1148,23 @@
 							}
 						},
 						{
+							"station": "09085000",
+							"name": "ROARING FORK RIVER AT GLENWOOD SPRINGS, CO.",
+							"service": {
+								"url": "https://waterservices.usgs.gov/nwis/iv/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"sites": "09085000",
+									"period": "P7D",
+									"parameterCd": [
+										"00060"
+									],
+									"format": "json"
+								}
+							}
+						},
+						{
 							"station": "09085100",
 							"name": "COLORADO RIVER BELOW GLENWOOD SPRINGS, CO",
 							"service": {
@@ -1161,6 +1178,25 @@
 										"00060"
 									],
 									"format": "json"
+								}
+							}
+						},
+						{
+							"station": "RIFRESCO",
+							"name": "RIFLE GAP RESERVOIR NEAR RIFLE, CO",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "RIFRESCO",
+									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 13602
+									},
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
 								}
 							}
 						}
@@ -1592,6 +1628,21 @@
 									"format": "json"
 								}
 							}
+						},{
+							"station": "CRYDOWCO",
+							"name": "CRYSTAL RIVER AT DOW FISH HATCHERY AB CARBONDALE",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "CRYDOWCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
 						},
 						{
 							"station": "09085000",
@@ -1944,6 +1995,25 @@
 									"format": "json",
 									"abbrev": "PLASTRCO",
 									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
+						},
+						{
+							"station": "CHARESCO",
+							"name": "CHATFIELD RESERVOIR",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrytimeseriesday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "CHARESCO",
+									"parameter": "STORAGE",
+									"capacity": {
+										"acft": 27076
+									},
 									"max-measDate": "new Date()",
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
