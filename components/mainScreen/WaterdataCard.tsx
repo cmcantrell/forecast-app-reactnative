@@ -1,7 +1,7 @@
 "use strict";
 
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Platform, Linking } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { useSelector } from "react-redux";
 import Collapsible from 'react-native-collapsible';
@@ -38,7 +38,8 @@ const WaterdataCard = (props) => {
                                 mapPoints: {},
                                 _72HrPercentageChange: null,
                                 percentageOfCapacity: null,
-                                capacity: null
+                                capacity: null,
+                                geoLocation: null
                             },
                             currentData = null;
                         if (typeof parsedData.map != "function") {
@@ -49,12 +50,15 @@ const WaterdataCard = (props) => {
                             // get current timesSeries
                             if (Object.keys(d)[0] == "_0hr") {
                                 currentData = (d[Object.keys(d)[0]]);
-                                //console.log("currentData",currentData);
+                                // console.log("currentData",currentData);
                                 responseData.currentMeasurementValue = currentData.measurementValue;
                                 responseData.currentMeasurementType = currentData.measurementType;
                                 if (responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") {
                                     responseData.capacity = currentData.capacity || null;
                                     responseData.percentageOfCapacity = currentData.percentageOfCapacity || null;
+                                }
+                                if(currentData.geoLocation != undefined){
+                                    responseData.geoLocation = currentData.geoLocation;
                                 }
                             }
                             if (Object.keys(d)[0] == "mapPoints") {
@@ -67,11 +71,11 @@ const WaterdataCard = (props) => {
                         setResponseData(responseData);
                     }).catch((err) => {
                         setResponseData({ error: err, request: apiData });
-                        console.log("ERROR1",err, apiData);
+                        console.log("ERROR1", err, apiData);
                     });
                 }).catch((err) => {
                     setResponseData({ error: err, request: apiData });
-                    console.log("ERROR2",err, apiData);
+                    console.log("ERROR2", err, apiData);
                 });
             }
         }
@@ -190,13 +194,13 @@ const WaterdataCard = (props) => {
         }
         return false;
     }
-    
+
     /**
      * 
      */
-     const isValidStorageCapacityValue = () => {
+    const isValidStorageCapacityValue = () => {
         if (isStorageValue() == true) {
-            if(responseData.capacity != null && responseData.percentageOfCapacity != null){
+            if (responseData.capacity != null && responseData.percentageOfCapacity != null) {
                 return true;
             }
         }
@@ -212,11 +216,24 @@ const WaterdataCard = (props) => {
         if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
             _styles = { ..._styles, ...{ height: 100 } }
         }
+        
+        // geo data
+        let lat = null;
+        let lng = null
+        if(responseData.geoLocation != null){
+            let geo = responseData.geoLocation;
+            if(geo.longitude != null && geo.latitude != null){
+                lat = geo.latitude;
+                lng = geo.longitude;
+            }
+        }
+
+        // text blocks
         let subtext = `Values measured in ${responseData.currentMeasurementType}. Explanations for data terms can be found on the settings tab.`;
         if (responseData.currentMeasurementValue == "Ssn") {
             subtext = `This is a Seasonally operated station, and is currently in the off-season.`;
         }
-        let getSpecialValues = () => {
+        const getSpecialValues = () => {
             let specialValuesTxt = "";
             if (isStorageValue() == true) {
                 //console.log(responseData);
@@ -225,18 +242,47 @@ const WaterdataCard = (props) => {
                 }
             }
             return (
-                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 14, fontStyle: "italic", marginTop: -5 } }}>{specialValuesTxt}</Text>
+                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 14, fontStyle: "italic", marginTop: 0 } }}>{specialValuesTxt}</Text>
             );
         }
         return (
             <View style={_styles}>
                 <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 17 } }}>{name}</Text>
+                {getMapLink(lat,lng)}
                 {getGraph()}
                 {getSpecialValues()}
+                
                 <Text style={styles.graphSubText}>{subtext}</Text>
             </View>
         );
     };
+
+    const getMapLink = (lat = null, lng = null) => {
+        
+        if (null == lat && null == lng) {
+            return;
+        }
+        console.log("@getMapLink()",lat, lng)
+        const scheme = Platform.select({ ios: 'maps:0,0?q=', android: 'geo:0,0?q=' });
+        const latLng = `${lat},${lng}`;
+        const label = 'Custom Label';
+        const url = Platform.select({
+            ios: `${scheme}${label}@${latLng}`,
+            android: `${scheme}${latLng}(${label})`
+        });
+        console.log("@getMapLink()",url)
+        return (
+            <View>
+                <TouchableOpacity
+                    onPress={() => {
+                        Linking.openURL(url); 
+                    }}
+                >
+                    <Text style={{fontSize: 17,marginTop: 15, width: "90%", marginLeft: "5%", textAlign: "center", color: "rgb(209,129,51)", fontFamily: styleConstants.fonts.headerFontFamily }}>open in maps</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
 
     const getGraph = () => {
         if (typeof responseData.mapPoints == "object" && responseData.mapPoints.constructor.name == "Array" && responseData.mapPoints.length > 1) {
@@ -257,7 +303,7 @@ const WaterdataCard = (props) => {
             return (<LineChart
                 width={graphWidth}
                 height={((graphWidth) * 0.4)}
-                style={{ marginTop: 5, borderRadius: 1, paddingBottom: 10 }}
+                style={{ marginTop: 30, borderRadius: 1, paddingBottom: 10 }}
                 withShadow={false}
                 // withVerticalLabels={false} 
                 // fromZero={true}
@@ -377,7 +423,7 @@ const padding = 10;
 const topViewHeight = 100;
 const textViewHeight = 55;
 const buttonViewHeight = topViewHeight - (padding * 2) - textViewHeight;
-const bottomViewHeight = 275;
+const bottomViewHeight = 300;
 
 const styles = StyleSheet.create({
     mainContainer: {
@@ -475,6 +521,7 @@ const styles = StyleSheet.create({
     bottomViewContainer: {
         width: "100%",
         // height: bottomViewHeight,
+        paddingTop: 20,
         // paddingBottom: (padding),
         flexDirection: "column",
         // backgroundColor: "rgb(90,50,40)"
@@ -489,7 +536,7 @@ const styles = StyleSheet.create({
         paddingLeft: padding,
         paddingRight: padding,
         marginTop: 10,
-        marginBottom: 20,
+        marginBottom: 0,
         fontSize: 16,
         color: "rgba(25,255,255,0.6)",
         textAlign: "center"

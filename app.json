@@ -4,7 +4,6 @@
     "description": "Get realtime data on river flows & reservoir levels for the US from the USGS & other state level resources.",
     "slug": "forecast_fishing_forecast",
     "version": "2.0.2",
-    "sdkVersion": "40.0.0",
     "platforms": [
       "ios",
       "android"
