@@ -26,7 +26,9 @@ export default function Header(){
         <View style={styles.container}>
             <Text style={styles.header} ellipsizeMode="middle" numberOfLines={2}>{content}</Text>
                 <Ionicons 
-                name="ios-refresh" 
+                // name="ios-refresh" 
+                name="ios-backspace-outline"  
+                // name="md-backspace-outline"  
                 size={42} 
                 style={styles.icon} 
                 color={iconColor} 

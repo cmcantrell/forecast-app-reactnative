@@ -57,7 +57,7 @@ const WaterdataCard = (props) => {
                                     responseData.capacity = currentData.capacity || null;
                                     responseData.percentageOfCapacity = currentData.percentageOfCapacity || null;
                                 }
-                                if(currentData.geoLocation != undefined){
+                                if (currentData.geoLocation != undefined) {
                                     responseData.geoLocation = currentData.geoLocation;
                                 }
                             }
@@ -216,13 +216,13 @@ const WaterdataCard = (props) => {
         if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
             _styles = { ..._styles, ...{ height: 100 } }
         }
-        
+
         // geo data
         let lat = null;
         let lng = null
-        if(responseData.geoLocation != null){
+        if (responseData.geoLocation != null) {
             let geo = responseData.geoLocation;
-            if(geo.longitude != null && geo.latitude != null){
+            if (geo.longitude != null && geo.latitude != null) {
                 lat = geo.latitude;
                 lng = geo.longitude;
             }
@@ -248,21 +248,21 @@ const WaterdataCard = (props) => {
         return (
             <View style={_styles}>
                 <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 17 } }}>{name}</Text>
-                {getMapLink(lat,lng)}
+                {getMapLink(lat, lng)}
                 {getGraph()}
                 {getSpecialValues()}
-                
+
                 <Text style={styles.graphSubText}>{subtext}</Text>
             </View>
         );
     };
 
     const getMapLink = (lat = null, lng = null) => {
-        
+
         if (null == lat && null == lng) {
             return;
         }
-        console.log("@getMapLink()",lat, lng)
+        console.log("@getMapLink()", lat, lng)
         const scheme = Platform.select({ ios: 'maps:0,0?q=', android: 'geo:0,0?q=' });
         const latLng = `${lat},${lng}`;
         const label = 'Custom Label';
@@ -270,15 +270,27 @@ const WaterdataCard = (props) => {
             ios: `${scheme}${label}@${latLng}`,
             android: `${scheme}${latLng}(${label})`
         });
-        console.log("@getMapLink()",url)
+        const mapIcon = Platform.select({
+            ios: "ios-map-outline",
+            android: "md-map-outline"
+        });
+        console.log("@getMapLink()", url)
         return (
-            <View>
+            <View style={{flexDirection: "column"}}>
                 <TouchableOpacity
                     onPress={() => {
-                        Linking.openURL(url); 
-                    }}
+                        Linking.openURL(url);
+                    }} 
+                    style={{flexDirection: "row"}}
                 >
-                    <Text style={{fontSize: 17,marginTop: 15, width: "90%", marginLeft: "5%", textAlign: "center", color: "rgb(209,129,51)", fontFamily: styleConstants.fonts.headerFontFamily }}>open in maps</Text>
+                    <Text style={{ fontSize: 17, marginTop: 15, width: "60%", textAlign: "right", color: "rgb(209,129,51)", fontFamily: styleConstants.fonts.headerFontFamily }}>open in maps</Text>
+                    <Ionicons
+                        name={mapIcon} 
+                        color="rgb(209,129,51)" 
+                        size={21}
+                        style={{width: "40%", textAlign:"left", marginTop: 15, marginLeft: 10}}
+                        
+                        />
                 </TouchableOpacity>
             </View>
         );
