@@ -2,7 +2,7 @@
 
 export const nullDataValue = "no selection";
 
-export const ucFirst = (str:string) => {
+export const ucFirst = (str: string) => {
     if (typeof str !== "string") {
         return false;
     }
@@ -19,29 +19,27 @@ export const ucFirst = (str:string) => {
     return ucParts.join(" ");
 };
 
-export const percentageChangeOver72 = (timeSeries:any) => {
+export const percentageChangeOver72 = (timeSeries: any) => {
     let point1 = timeSeries[0],
-        // point2 = timeSeries[timeSeries.length - 1];
-        point2 = timeSeries[2];
-    if (point1 != undefined && point2 != undefined){ 
-        if(!isNaN(point1.y && !isNaN(point2.y))) {
-            // what percent of point1.y is point2.y
-            // return (((parseInt(((point2.y / point1.y) * 100), 10)) - 100) * (-1));
-            return Math.round((((point2.y / point1.y) as number) * 100)-100)*-1;
+        point2 = timeSeries[1],
+        point3 = timeSeries[2];
+    if (point1 != undefined && point2 != undefined && point3 != undefined) {
+        if (!isNaN(point1.y && !isNaN(point2.y)) && !isNaN(point3.y)) {
+            return(  (Math.round((point1.y/point3.y) * 100) - 100) );
         }
+
     }
     return NaN;
 };
 
-export const getStoragePercentage = (value:number,capacity:number) => {
-    if(Number.isInteger(value) && Number.isInteger(capacity) ){
-        // return (parseInt(((value / capacity) * 100), 10));
+export const getStoragePercentage = (value: number, capacity: number) => {
+    if (Number.isInteger(value) && Number.isInteger(capacity)) {
         return Math.round((value / capacity) * 100);
     }
     return NaN;
 }
 
-export const getRegionSource = (data:{}) => {
+export const getRegionSource = (data: {}) => {
     let _regionData = [];
     if (typeof data === "object") {
         for (let key in data) {
@@ -57,7 +55,7 @@ export const getRegionSource = (data:{}) => {
     return _regionData;
 };
 
-export const getWatershedSource = (data:any,region:string|null) => {
+export const getWatershedSource = (data: any, region: string | null) => {
     let _watershedData = [];
     if (region !== null) {
         if (typeof data[region] === "object") {
@@ -78,20 +76,20 @@ export const getWatershedSource = (data:any,region:string|null) => {
     return _watershedData;
 };
 
-export const getSitesSource = (data:any, watershed:string|null) => {
+export const getSitesSource = (data: any, watershed: string | null) => {
     let sites = [];
-    if(watershed != null){
-        for(let _watershed in data.watershed){
-            if(data.watershed.hasOwnProperty(_watershed)){
-                if(data.watershed[_watershed].name == watershed){
+    if (watershed != null) {
+        for (let _watershed in data.watershed) {
+            if (data.watershed.hasOwnProperty(_watershed)) {
+                if (data.watershed[_watershed].name == watershed) {
                     let _sitesData = data.watershed[_watershed].sites;
-                    for(let _site in _sitesData){
-                        if(_sitesData.hasOwnProperty(_site)){
+                    for (let _site in _sitesData) {
+                        if (_sitesData.hasOwnProperty(_site)) {
                             sites.push({
-                               label:  _sitesData[_site].name,
-                               value: _sitesData[_site].name
+                                label: _sitesData[_site].name,
+                                value: _sitesData[_site].name
                             });
-                       }
+                        }
                     }
                 }
             }

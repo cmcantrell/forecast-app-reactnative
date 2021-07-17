@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, Linking } from "react-native";
 
 import styleConstants from "../../assets/style-constants.json";
 
@@ -14,6 +14,15 @@ export default function MainSettings() {
       </View>
       <LocationSettings />
       <InfoSettings />
+      <TouchableOpacity
+        onPress={() => {
+          Linking.openURL("https://www.forecastflyfishing.com");
+        }}>
+        <Image
+          style={{ height: 60, resizeMode: "contain", marginTop: 40, opacity: 0.67 }}
+          source={require('../../assets/images/icon-display.png')}
+        />
+      </TouchableOpacity>
     </View>
   );
 }

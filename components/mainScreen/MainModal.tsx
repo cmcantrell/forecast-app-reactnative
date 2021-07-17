@@ -1,7 +1,7 @@
 "use strict";
 
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image, Linking } from "react-native";
 import { dataStoreRegionKey, dataStoreWatershedKey, getData } from "../../lib/helper/AsyncHelper";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -52,27 +52,34 @@ export default function MainModal() {
 
     return (
         <View style={styles.container}>
-            <View >
-                    <View style={{ paddingTop: 200 }}>
-                        <Text style={{color:"#000"}}>One</Text>
-                        <RegionPicker selectedValue={region} />
-                        <Text style={{color:"#000"}}>Two</Text>
-                        <WatershedPicker selectedValue={watershed} />
-                        <View>
-                            <TouchableOpacity
-                                style={buttonStyles}
-                                onPress={() => {
-                                    if (region != null && watershed != null) {
-                                        dispatch(setValidWaterdataRequestSubmitted(true));
-                                    }
-                                }}
-                                disabled={buttonDisabled} >
-                                <Text style={styles.buttonText}>GET DATA</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <Text style={{ width: "90%", marginLeft: "5%", marginTop: 20, fontSize: 11, textAlign: "center", color: styleConstants.colors.lightGrey }}>contact, support & FAQ details can be found on the Settings tab. Contact support if you don't see your local waters.</Text>
+            <View>
+                <View style={{ paddingTop: "50%" }}>
+                    <RegionPicker selectedValue={region} />
+                    <WatershedPicker selectedValue={watershed} />
+                    <View style={{ marginLeft: 10, marginRight: 10 }}>
+                        <TouchableOpacity
+                            style={buttonStyles}
+                            onPress={() => {
+                                if (region != null && watershed != null) {
+                                    dispatch(setValidWaterdataRequestSubmitted(true));
+                                }
+                            }}
+                            disabled={buttonDisabled} >
+                            <Text style={styles.buttonText}>GET DATA</Text>
+                        </TouchableOpacity>
+                        <Text style={{ marginTop: 20, fontSize: 11, textAlign: "center", color: styleConstants.colors.lightGrey }}>contact, support & FAQ details can be found on the Settings tab. Contact support if you don't see your local waters.</Text>
                     </View>
+                </View>
             </View>
+            <TouchableOpacity
+                onPress={() => {
+                    Linking.openURL("https://www.forecastflyfishing.com");
+                }}>
+                <Image
+                    style={{ height: 60, resizeMode: "contain", marginTop: 60, opacity: 0.67 }}
+                    source={require('../../assets/images/icon-display-black.png')}
+                />
+            </TouchableOpacity>
         </View>
     );
 }
@@ -80,22 +87,13 @@ export default function MainModal() {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        height: "auto",
+        height: "100%",
         flex: 1,
         alignItems: "center",
         justifyContent: "flex-start",
-        backgroundColor:"#fff"
-    },
-    modalContainer: {
-        width: "100%",
-        height: "auto",
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "flex-start"
+        backgroundColor: "#fff"
     },
     button: {
-        marginRight: 80,
-        marginLeft: 80,
         marginTop: 40,
         paddingTop: 10,
         paddingBottom: 10,

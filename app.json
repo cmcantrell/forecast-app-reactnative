@@ -21,7 +21,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.forecastflyfishing.fishingforecast",
-      "buildNumber": "2.0.3.3"
+      "buildNumber": "2.0.3.4"
     },
     "android": {
       "package": "com.forecastflyfishing.fishingforecast",

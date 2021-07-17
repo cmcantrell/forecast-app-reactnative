@@ -85,7 +85,7 @@ const WaterdataCard = (props: { inst: number }) => {
                                 currentData = (d[Object.keys(d)[0]]);
                                 responseData.currentMeasurementValue = currentData.measurementValue;
                                 responseData.currentMeasurementType = currentData.measurementType;
-                                if (responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") {
+                                if (currentData.measurementType == "acft" || currentData.measurementType == "ac-ft") {
                                     responseData.capacity = currentData.capacity || null;
                                     responseData.percentageOfCapacity = currentData.percentageOfCapacity || null;
                                 }
@@ -122,20 +122,31 @@ const WaterdataCard = (props: { inst: number }) => {
 
     const renderMeasurementData = () => {
         if (responseData.currentMeasurementValue != null) {
+            let measurementType = "";
+            if (responseData.currentMeasurementType != null) {
+                measurementType = responseData.currentMeasurementType;
+                if (measurementType == "acft" || measurementType == "ac-ft") {
+                    measurementType = "Kacft";
+                }
+            }
+
             if (typeof responseData.currentMeasurementValue == "string") {
-                return <View><Text style={styles.currentMeasurementValue}>{responseData.currentMeasurementValue}</Text></View>
+                return (
+                    <View style={styles.currentMeasurementContainer}>
+                        <Text style={styles.currentMeasurementValue}>{responseData.currentMeasurementValue}</Text>
+                        <Text style={styles.currentMeasurementType}>{measurementType}</Text>
+                    </View>
+                );
             } else if (typeof responseData.currentMeasurementValue == "number") {
                 if (responseData.currentMeasurementValue > 9999) {
                     responseData.currentMeasurementValue = `${((responseData.currentMeasurementValue / 1000).toFixed(1))}`;
                 }
-                let measurementType = responseData.currentMeasurementType;
-                if (measurementType == "acft") {
-                    measurementType = "Kacft";
-                }
-                return <View style={styles.currentMeasurementContainer}>
-                    <Text style={styles.currentMeasurementValue}>{responseData.currentMeasurementValue}</Text>
-                    <Text style={styles.currentMeasurementType}>{measurementType}</Text>
-                </View>
+                return (
+                    <View style={styles.currentMeasurementContainer}>
+                        <Text style={styles.currentMeasurementValue}>{responseData.currentMeasurementValue}</Text>
+                        <Text style={styles.currentMeasurementType}>{measurementType}</Text>
+                    </View>
+                );
             }
         } else {
             return (
@@ -158,7 +169,7 @@ const WaterdataCard = (props: { inst: number }) => {
                 let iconColor = getIconColor(responseData._72HrPercentageChange);
                 return (
                     <View style={styles.percentChangeContainer}>
-                        <View style={styles.percentTextContainer}><Text style={{ ...styles.percentIconText, ...{ color: iconColor } }}>+/-</Text><Text style={styles.percentText}>{responseData._72HrPercentageChange}%72hrs.</Text></View>
+                        <View style={styles.percentTextContainer}><Text style={{ ...styles.percentIconText, ...{ color: iconColor } }}>+/-</Text><Text style={styles.percentText}>{responseData._72HrPercentageChange}%/72hrs.</Text></View>
                     </View>);
             }
         } else if (responseData.currentMeasurementValue == undefined) {
@@ -184,7 +195,7 @@ const WaterdataCard = (props: { inst: number }) => {
 
     const getIconColor = (intVal: number) => {
         intVal = Math.abs(intVal);
-        if (isStorageValue()) {
+        if (isValidStorageCapacityValue()) {
             if (intVal > 90) {
                 return styleConstants.waterdataCards.colors.green;
             } else if (intVal <= 90 && intVal > 79) {
@@ -392,7 +403,10 @@ const WaterdataCard = (props: { inst: number }) => {
             let specialValuesTxt = "";
             if (isStorageValue() == true) {
                 if (isValidStorageCapacityValue() == true) {
-                    specialValuesTxt = `Current level is ${responseData.percentageOfCapacity}% of full pool at ${responseData.capacity}${responseData.currentMeasurementType}`
+                    specialValuesTxt = `Current level is ${responseData.percentageOfCapacity}% of full pool`;
+                    if(typeof responseData.capacity == "string" || typeof responseData.capacity == "number"){
+                        specialValuesTxt += ` at ${responseData.capacity}${responseData.currentMeasurementType}`;
+                    }
                 }
             }
             return (
@@ -462,13 +476,6 @@ const buttonViewHeight = topViewHeight - (padding * 2) - textViewHeight;
 const bottomViewHeight = 400;
 
 const styles = StyleSheet.create({
-    mainContainer: {
-        width: "100%",
-        // height: styleConstants.waterdataCards.cardHeight,
-        flexDirection: "column",
-        margin: 0,
-        padding: 0
-    },
     topViewContainer: {
         width: "100%",
         height: topViewHeight,

@@ -30,13 +30,11 @@ class LocationSettings extends React.Component<{}, { selectedRegion: any, savedR
             if (regionResponse != null) {
                 if (this.state.selectedRegion == null) {
                     this.setSelectedRegion(regionResponse);
-                    console.log("@LocationSettings._componentDidMount",regionResponse);
                 }
                 getData(dataStoreWatershedKey).then((watershedResponse) => {
                     if (watershedResponse != null) {
                         if (this.state.selectedWatershed == null) {
                             this.setSelectedWatershed(watershedResponse);
-                            console.log("@LocationSettings._componentDidMount",watershedResponse);
                         }
                     }
                 });
@@ -59,7 +57,6 @@ class LocationSettings extends React.Component<{}, { selectedRegion: any, savedR
      * @params val string | null
      */
     setSelectedWatershed(val: string | null) {
-        console.log("@LocationSettings.setSelectedWatershed", val);
         if(val == "no selection"){
             val = null;
         }

@@ -947,6 +947,22 @@
 									"min-measDate": "new Date(new Date()-604800000)"
 								}
 							}
+						},
+						{
+							"station": "BOCOROCO",
+							"name": "BOULDER CREEK NEAR ORODELL, CO.",
+							"service": {
+								"url": "https://dwr.state.co.us/Rest/GET/api/v2/surfacewater/surfacewatertsday/",
+								"service": "rest",
+								"method": "get",
+								"params": {
+									"format": "json",
+									"abbrev": "BOCOROCO",
+									"measType": "Streamflow",
+									"max-measDate": "new Date()",
+									"min-measDate": "new Date(new Date()-604800000)"
+								}
+							}
 						}
 					]
 				},
