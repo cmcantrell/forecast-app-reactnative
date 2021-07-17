@@ -1,13 +1,8 @@
 {
   "expo": {
     "name": "Forecast - Fishing Forecast & Water Data",
-    "description": "Get realtime data on river flows & reservoir levels for the US from the USGS & other state level resources.",
     "slug": "forecast_fishing_forecast",
-    "version": "2.0.2",
-    "platforms": [
-      "ios",
-      "android"
-    ],
+    "version": "2.0.3",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -18,14 +13,15 @@
       "backgroundColor": "#222"
     },
     "updates": {
-      "fallbackToCacheTimeout": 2000
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.forecastflyfishing.fishingforecast"
+      "bundleIdentifier": "com.forecastflyfishing.fishingforecast",
+      "buildNumber": "2.0.3.2"
     },
     "android": {
       "package": "com.forecastflyfishing.fishingforecast",
@@ -37,6 +33,9 @@
       "permissions": [
         "WRITE_EXTERNAL_STORAGE"
       ]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
     }
   }
 }

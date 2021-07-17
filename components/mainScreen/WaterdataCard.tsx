@@ -3,51 +3,85 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Platform, Linking } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+
 import { useSelector } from "react-redux";
+import { RootState } from "../../lib/store/reducers/rootReducer";
+
+import Accordion from 'react-native-collapsible/Accordion';
 import Collapsible from 'react-native-collapsible';
-import styleConstants from "../../assets/style-constants";
+// import CollapsibleView from "@eliav2/react-native-collapsible-view";
 import { Ionicons } from '@expo/vector-icons';
-import { parseRequestParamsToString, parseWaterDataResponse } from "../../lib/helper/ApiHelper";
 import { LineChart } from "react-native-chart-kit";
 
+import { parseRequestParamsToString, parseWaterDataResponse } from "../../lib/helper/ApiHelper.js";
+// import ResponseData from "../../lib/model/responseData";
+import styleConstants from "../../assets/style-constants.json";
 
-const WaterdataCard = (props) => {
-    const requestWaterdata = useSelector(state => state.waterdata.requestWaterdata[props.inst]) || {};
-    const [responseData, setResponseData] = useState({});
+const WaterdataCard = (props: { inst: number }) => {
 
-    const name = requestWaterdata.name || "",
-        apiData = requestWaterdata.service || {};
+    const requestWaterdata = useSelector((state: RootState) => state.waterdata.requestWaterdata[props.inst]) || {};
+    const [responseData, setResponseData] = useState({
+        currentMeasurementValue: null,
+        currentMeasurementType: null,
+        mapPoints: {},
+        _72HrPercentageChange: null,
+        percentageOfCapacity: null,
+        capacity: null,
+        geoLocation: null,
+        request: null,
+        status: 0,
+        error: "0"
+    });
 
-    let collapsabelIconColor = styleConstants.colors.burntOrange;
+    /**
+     * 
+     */
+    const [isCollapsed, setIsCollapsed] = useState(true);
+    const setIsCollapsedHandler = (val: boolean) => {
+        setIsCollapsed(val);
+    };
 
     const navigation = useNavigation();
 
+    const name = requestWaterdata.name || "",
+        requestData = requestWaterdata.service || {};
+
+    let collapsabelIconColor = styleConstants.colors.burntOrange;
+
     const apiRequest = () => {
         const time = Date.now();
-        if (Object.entries(responseData).length < 1) {
-            if (apiData.method == "get") {
-                let paramsString = parseRequestParamsToString(apiData.params);
-                return fetch(`${apiData.url}${paramsString}`, {
-                    method: `${apiData.method.toUpperCase()}`
+        if (typeof responseData == "object" && responseData.status == 0) {
+            if (requestData.method == "get") {
+                let paramsString = parseRequestParamsToString(requestData.params);
+                let responseData = {
+                    currentMeasurementValue: null,
+                    currentMeasurementType: null,
+                    mapPoints: {},
+                    _72HrPercentageChange: null,
+                    percentageOfCapacity: null,
+                    capacity: null,
+                    geoLocation: null,
+                    request: requestData,
+                    status: 1,
+                    error: "0"
+                };
+                return fetch(`${requestData.url}${paramsString}`, {
+                    method: `${requestData.method.toUpperCase()}`
+                }).then((response) => {
+                    if (!response.ok) {
+                        throw Error(response.statusText);
+                    }
+                    return response;
                 }).then((response) => {
                     response.json().then((j) => {
-                        let parsedData = parseWaterDataResponse(apiData, j),
-                            responseData = {
-                                currentMeasurementValue: null,
-                                currentMeasurementType: null,
-                                mapPoints: {},
-                                _72HrPercentageChange: null,
-                                percentageOfCapacity: null,
-                                capacity: null,
-                                geoLocation: null
-                            },
+                        let parsedData = parseWaterDataResponse(requestData, j),
                             currentData = null;
-                        if (typeof parsedData.map != "function") {
+                        if (typeof parsedData.forEach != "function") {
+                            console.log("foreach is not a function");
+                            responseData.status = 4;
                             return setResponseData(responseData);
                         }
-                        //console.log("parsedData",parsedData);
-                        parsedData.map((d) => {
-                            // get current timesSeries
+                        parsedData.forEach((d) => {
                             if (Object.keys(d)[0] == "_0hr") {
                                 currentData = (d[Object.keys(d)[0]]);
                                 // console.log("currentData",currentData);
@@ -68,14 +102,20 @@ const WaterdataCard = (props) => {
                                 responseData._72HrPercentageChange = (d[Object.keys(d)[0]]);
                             }
                         });
+                        responseData.status = 4;
                         setResponseData(responseData);
                     }).catch((err) => {
-                        setResponseData({ error: err, request: apiData });
-                        console.log("ERROR1", err, apiData);
+                        console.log("ERROR1", err, requestData);
+                        responseData.error = err,
+                            responseData.status = 4;
+                        setResponseData(responseData);
                     });
                 }).catch((err) => {
-                    setResponseData({ error: err, request: apiData });
-                    console.log("ERROR2", err, apiData);
+                    console.log("ERROR2", err, requestData);
+                    responseData.error = err,
+                        responseData.status = 4;
+                    setResponseData(responseData);
+
                 });
             }
         }
@@ -83,7 +123,7 @@ const WaterdataCard = (props) => {
     apiRequest();
 
     const renderMeasurementData = () => {
-        if (responseData.currentMeasurementValue != undefined) {
+        if (responseData.currentMeasurementValue != null) {
             if (typeof responseData.currentMeasurementValue == "string") {
                 return <View><Text style={styles.currentMeasurementValue}>{responseData.currentMeasurementValue}</Text></View>
             } else if (typeof responseData.currentMeasurementValue == "number") {
@@ -144,7 +184,7 @@ const WaterdataCard = (props) => {
         }
     };
 
-    const getIconColor = (intVal) => {
+    const getIconColor = (intVal: number) => {
         intVal = Math.abs(intVal);
         if (isStorageValue()) {
             if (intVal > 90) {
@@ -177,17 +217,6 @@ const WaterdataCard = (props) => {
     /**
      * 
      */
-    const [isCollapsed, setIsCollapsed] = useState(true);
-    const setIsCollapsedHandler = (val) => {
-        if (typeof val !== "boolean") {
-            val = false;
-        }
-        setIsCollapsed(val);
-    };
-
-    /**
-     * 
-     */
     const isStorageValue = () => {
         if (responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") {
             return true;
@@ -207,65 +236,14 @@ const WaterdataCard = (props) => {
         return false;
     }
 
-    /**
-     * 
-     */
-    const renderCollapsableContent = () => {
-        // console.log(responseData)
-        let _styles = styles.bottomViewContainer;
-        if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
-            _styles = { ..._styles, ...{ height: 100 } }
-        }
-
-        // geo data
-        let lat = null;
-        let lng = null
-        if (responseData.geoLocation != null) {
-            let geo = responseData.geoLocation;
-            if (geo.longitude != null && geo.latitude != null) {
-                lat = geo.latitude;
-                lng = geo.longitude;
-            }
-        }
-
-        // text blocks
-        let subtext = `Values measured in ${responseData.currentMeasurementType}. Explanations for data terms can be found on the settings tab.`;
-        if (responseData.currentMeasurementValue == "Ssn") {
-            subtext = `This is a Seasonally operated station, and is currently in the off-season.`;
-        }
-        const getSpecialValues = () => {
-            let specialValuesTxt = "";
-            if (isStorageValue() == true) {
-                //console.log(responseData);
-                if (isValidStorageCapacityValue() == true) {
-                    specialValuesTxt = `Current level is ${responseData.percentageOfCapacity}% of full pool at ${responseData.capacity}${responseData.currentMeasurementType}`
-                }
-            }
-            return (
-                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 14, fontStyle: "italic", marginTop: 0 } }}>{specialValuesTxt}</Text>
-            );
-        }
-        return (
-            <View style={_styles}>
-                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 17 } }}>{name}</Text>
-                {getMapLink(lat, lng)}
-                {getGraph()}
-                {getSpecialValues()}
-
-                <Text style={styles.graphSubText}>{subtext}</Text>
-            </View>
-        );
-    };
-
     const getMapLink = (lat = null, lng = null) => {
 
         if (null == lat && null == lng) {
             return;
         }
-        console.log("@getMapLink()", lat, lng)
         const scheme = Platform.select({ ios: 'maps:0,0?q=', android: 'geo:0,0?q=' });
         const latLng = `${lat},${lng}`;
-        const label = 'Custom Label';
+        const label = name != "" ? name : "Guaging Station";
         const url = Platform.select({
             ios: `${scheme}${label}@${latLng}`,
             android: `${scheme}${latLng}(${label})`
@@ -274,23 +252,22 @@ const WaterdataCard = (props) => {
             ios: "ios-map-outline",
             android: "md-map-outline"
         });
-        console.log("@getMapLink()", url)
         return (
-            <View style={{flexDirection: "column"}}>
+            <View style={{ flexDirection: "column" }}>
                 <TouchableOpacity
                     onPress={() => {
                         Linking.openURL(url);
-                    }} 
-                    style={{flexDirection: "row"}}
+                    }}
+                    style={{ flexDirection: "row" }}
                 >
                     <Text style={{ fontSize: 17, marginTop: 15, width: "60%", textAlign: "right", color: "rgb(209,129,51)", fontFamily: styleConstants.fonts.headerFontFamily }}>open in maps</Text>
                     <Ionicons
-                        name={mapIcon} 
-                        color="rgb(209,129,51)" 
+                        name={mapIcon}
+                        color="rgb(209,129,51)"
                         size={21}
-                        style={{width: "40%", textAlign:"left", marginTop: 15, marginLeft: 10}}
-                        
-                        />
+                        style={{ width: "40%", textAlign: "left", marginTop: 15, marginLeft: 10 }}
+
+                    />
                 </TouchableOpacity>
             </View>
         );
@@ -352,58 +329,109 @@ const WaterdataCard = (props) => {
         }
     };
 
-    if (typeof responseData == "object" && Object.entries(responseData).length > 0) {
-        if (!isCollapsed) {
+    const renderTopView = () => {
+        return (
+            <View style={styles.topViewContainer} >
+                <View style={styles.topLeftView}>
+                    <View style={styles.topLeftViewTextContainer}>
+                        <Text
+                            style={styles.topLeftViewText}
+                            ellipsizeMode="middle"
+                            numberOfLines={2}
+                        >{name.toUpperCase()}</Text>
+                    </View>
+                    <View style={styles.buttonViewContainer}>
+                        <TouchableOpacity
+                            onPress={() => {
+                                let _isCollapsed;
+                                if (isCollapsed == true) {
+                                    _isCollapsed = false;
+                                } else {
+                                    _isCollapsed = true;
+                                }
+                                setIsCollapsedHandler(_isCollapsed);
+                            }}
+                        >
+                            {getCollapsibleLink()}
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.topRightView}>
+                    {renderMeasurementData()}
+                    {renderChangeData()}
+                </View>
+            </View>
+        );
+    }
+
+    /**
+     * 
+     */
+    const renderCollapsableContent = () => {
+        // console.log(responseData)
+        let _styles = styles.bottomViewContainer;
+        if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
+            // if map points don't exist, make this view shorter
+            _styles = { ..._styles, ...{ height: 100 } }
+        }
+
+        // geo data
+        let lat = null;
+        let lng = null
+        if (responseData.geoLocation != null) {
+            let geo = responseData.geoLocation;
+            if (geo.longitude != null && geo.latitude != null) {
+                lat = geo.latitude;
+                lng = geo.longitude;
+            }
+        }
+
+        // text blocks
+        let subtext = `Values measured in ${responseData.currentMeasurementType}. Explanations for data terms can be found on the settings tab.`;
+        if (responseData.currentMeasurementValue == "Ssn") {
+            subtext = `This is a Seasonally operated station, and is currently in the off-season.`;
+        }
+        const getSpecialValues = () => {
+            let specialValuesTxt = "";
+            if (isStorageValue() == true) {
+                if (isValidStorageCapacityValue() == true) {
+                    specialValuesTxt = `Current level is ${responseData.percentageOfCapacity}% of full pool at ${responseData.capacity}${responseData.currentMeasurementType}`
+                }
+            }
+            return (
+                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 14, fontStyle: "italic", marginTop: 0 } }}>{specialValuesTxt}</Text>
+            );
+        }
+        return (
+            <View style={_styles}>
+                <Text style={{ ...styles.collapsableContentText, ...{ fontSize: 17 } }}>{name}</Text>
+                {getMapLink(lat, lng)}
+                {getGraph()}
+                {getSpecialValues()}
+
+                <Text style={styles.graphSubText}>{subtext}</Text>
+            </View>
+        );
+    };
+
+    if (typeof responseData == "object" && responseData.status > 0) {
+        console.log("@render if", `isCollapsed: ${isCollapsed}`);
+        if (isCollapsed == false) {
             collapsabelIconColor = "rgb(115,60,26)";
         }
         return (
-            <View style={styles.mainContainer, { marginTop: 5 }}>
-                <View style={styles.topViewContainer}>
-                    <View style={styles.topLeftView}>
-                        <View style={styles.topLeftViewTextContainer}>
-                            <Text
-                                style={styles.topLeftViewText}
-                                ellipsizeMode="middle"
-                                numberOfLines={2}
-                            >{name.toUpperCase()}</Text>
-                        </View>
-                        <View style={styles.buttonViewContainer}>
-                            <TouchableOpacity
-                                onPress={() => {
-                                    let _isCollapsed;
-                                    if (isCollapsed === true) {
-                                        _isCollapsed = false;
-                                    } else {
-                                        _isCollapsed = true;
-                                    }
-                                    setIsCollapsedHandler(_isCollapsed);
-                                }}
-                            >
-                                {getCollapsibleLink()}
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <View style={styles.topRightView}>
-                        {renderMeasurementData()}
-                        {renderChangeData()}
-                    </View>
-                </View>
+            <View>
+                {renderTopView()}
                 <Collapsible collapsed={isCollapsed}>
                     {renderCollapsableContent()}
-                    {/* <View>
-                        <TouchableOpacity 
-                        onPress={(ugh) => {
-                            navigation.navigate("Logs", { data: responseData });
-                        }}
-                        ><Text style={styles.logsLink}>Log Data</Text></TouchableOpacity>
-                    </View> */}
                 </Collapsible>
                 <View style={styles.borderView}></View>
             </View>
         );
     } else {
+        // this only renders when the API request hasn't completed.
         return (
-            <View style={styles.mainContainer, { marginTop: 5 }}>
+            <View>
                 <View style={styles.topViewContainer}>
                     <View style={styles.topLeftView}>
                         <View style={styles.topLeftViewTextContainer}>
@@ -435,13 +463,15 @@ const padding = 10;
 const topViewHeight = 100;
 const textViewHeight = 55;
 const buttonViewHeight = topViewHeight - (padding * 2) - textViewHeight;
-const bottomViewHeight = 300;
+const bottomViewHeight = 400;
 
 const styles = StyleSheet.create({
     mainContainer: {
         width: "100%",
-        height: styleConstants.waterdataCards.cardHeight,
-        flexDirection: "column"
+        // height: styleConstants.waterdataCards.cardHeight,
+        flexDirection: "column",
+        margin: 0,
+        padding: 0
     },
     topViewContainer: {
         width: "100%",
@@ -532,7 +562,7 @@ const styles = StyleSheet.create({
     },
     bottomViewContainer: {
         width: "100%",
-        // height: bottomViewHeight,
+        height: bottomViewHeight,
         paddingTop: 20,
         // paddingBottom: (padding),
         flexDirection: "column",

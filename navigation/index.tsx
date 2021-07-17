@@ -1,19 +1,45 @@
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+/**
+ * If you are not familiar with React Navigation, check out the "Fundamentals" guide:
+ * https://reactnavigation.org/docs/getting-started
+ *
+ */
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import { ColorSchemeName } from 'react-native';
+import { ColorSchemeName, Modal } from 'react-native';
+
+import { RootState } from "./../lib/store/reducers/rootReducer";
+import { useSelector, useDispatch } from "react-redux"
+import MainModal from '../components/mainScreen/MainModal';
+
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
-// If you are not familiar with React Navigation, we recommend going through the
-// "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+  
+  // @DEBUG moved the modal functionality here, original config was resulting in error:
+  /*
+  'UIViewControllerHierarchyInconsistency', reason: 'child view controller:<ABI42_0_0RNScreensViewController: 0x7fe6f0050b80> should have parent view controller:(null) but actual parent is:<ABI42_0_0RNSScreen: 0x7fe6f0192260>'
+terminating with uncaught exception of type NSException
+abort() called
+   */
+  let validWaterdataRequestSubmitted = useSelector((state: RootState) => state.waterdata.validWaterdataRequestSubmitted);
+  let modalVisible = true;
+  if (validWaterdataRequestSubmitted == true) {
+    modalVisible = false;
+  }
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={DefaultTheme}>
+      <Modal animationType="slide"
+        presentationStyle="fullScreen"
+        visible={modalVisible}
+      >
+        <MainModal />
+      </Modal>
       <RootNavigator />
     </NavigationContainer>
   );

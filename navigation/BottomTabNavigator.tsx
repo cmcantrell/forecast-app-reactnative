@@ -1,25 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react';
+/**
+ * Learn more about createBottomTabNavigator:
+ * https://reactnavigation.org/docs/bottom-tab-navigator
+ */
+
+import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Ionicons } from '@expo/vector-icons';
+import * as React from 'react';
+
+import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+
 import MainScreen from '../screens/MainScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
-import styleConstants from "../assets/style-constants";
 
-// import * as notifications from "expo-notifications";
-// import * as Permissions from "expo-permissions";
+import { BottomTabParamList, MainParamList, SettingsParamList } from '../types';
+
+import styleConstants from "../assets/style-constants.json";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
-
   const colorScheme = useColorScheme();
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Home"
+      initialRouteName="MainScreen"
       tabBarOptions={{
         activeTintColor: styleConstants.colors.burntOrange,
         inactiveTintColor: styleConstants.fonts.bodyFontColor,
@@ -29,16 +35,16 @@ export default function BottomTabNavigator() {
         style: {
           backgroundColor: styleConstants.colors.darkGrey
         }
-      }} >
+      }}>
       <BottomTab.Screen
-        name="Home"
+        name="MainScreen"
         component={MainScreenNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="md-home" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-home" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="Settings"
+        name="SettingsScreen"
         component={SettingsScreenNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-settings" color={color} />,
@@ -50,36 +56,36 @@ export default function BottomTabNavigator() {
 
 // You can explore the built-in icon families and icons on the web at:
 // https://icons.expo.fyi/
-function TabBarIcon(props: { name: string; color: string }) {
-  return <Ionicons size={32} style={{ marginBottom: -3, height: 32 }} {...props} />;
+function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']; color: string }) {
+  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
 }
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const MainStack = createStackNavigator<MainParamList>();
 
-const MainScreenNavigator = function () {
+function MainScreenNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="Home"
+    <MainStack.Navigator>
+      <MainStack.Screen
+        name="MainScreen"
         component={MainScreen}
         options={{ headerShown: false }}
       />
-    </TabOneStack.Navigator>
+    </MainStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const SettingsStack = createStackNavigator<SettingsParamList>();
 
-const SettingsScreenNavigator = function () {
+function SettingsScreenNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="Settings"
+    <SettingsStack.Navigator>
+      <SettingsStack.Screen
+        name="SettingsScreen"
         component={SettingsScreen}
         options={{ headerShown: false }}
       />
-    </TabTwoStack.Navigator>
+    </SettingsStack.Navigator>
   );
 }

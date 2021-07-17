@@ -1,21 +1,20 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
-import { createStore, combineReducers } from "redux";
-import { Provider } from "react-redux";
-import waterdataReducer from "./lib/store/reducers/waterdata";
 
-const appReducer = combineReducers({
-  waterdata: waterdataReducer
-});
-const store = createStore(appReducer);
+import RootReducer from "./lib/store/reducers/rootReducer";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
+  const store = createStore(RootReducer);
 
   if (!isLoadingComplete) {
     return null;

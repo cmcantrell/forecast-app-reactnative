@@ -1,50 +1,56 @@
+"use strict";
+
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { View } from '../components/Themed';
+import { StyleSheet, View, Text } from 'react-native';
+
+import { useSelector, useDispatch } from "react-redux";
+import {RootState} from "../lib/store/reducers/rootReducer";
+
 import Header from "../components/mainScreen/Header";
 import MainLoadingScreen from "../components/mainScreen/MainLoadingScreen";
 import MainModal from "../components/mainScreen/MainModal";
-import WaterdataComponent from "../components/mainScreen/WaterdataComponent";
-import { useSelector, useDispatch } from "react-redux";
-import styleConstants from "../assets/style-constants";
-import { setWaterdataSource } from "../lib/store/actions/waterdata";
+import WaterdataComponent from '../components/mainScreen/WaterdataComponent';
+
+import styleConstants from "../assets/style-constants.json";
 
 export default function MainScreen() {
 
-    let region = useSelector(state => state.waterdata.region),
-        watershed = useSelector(state => state.waterdata.watershed),
-        dataRequestSubmitted = useSelector(state => state.waterdata.validWaterdataRequestSubmitted);
-        
-    /**
-     * @returns bool
-     */
-    const dataRequestIsValid = () => {
-        if (region === null || watershed === null || dataRequestSubmitted !== true) {
-            return false;
-        }
-        return true;
-    };
+  const dispatch = useDispatch();
 
-    let content = <MainLoadingScreen text="Select Your Location" />
-    if (dataRequestIsValid() === false) {
-        content = <MainModal />
-    } else if (dataRequestIsValid() === true) {
-        content = <WaterdataComponent />
+  let region = useSelector((state:RootState) => state.waterdata.region),
+    watershed = useSelector((state:RootState) => state.waterdata.watershed),
+    dataRequestSubmitted = useSelector((state:RootState) => state.waterdata.validWaterdataRequestSubmitted);
+  /**
+  * @returns bool
+  */
+  const dataRequestIsValid = () => {
+    if (region ===  null || watershed === null || dataRequestSubmitted != true) {
+      return false;
     }
+    return true;
+  };
 
-    return (
-        <View style={styles.container}>
-            <Header />
-            {content}
-        </View>
-    );
+  let content = <MainLoadingScreen text="Select Your Location" />
+  let dataRequestStatus = dataRequestIsValid();
+  if (dataRequestStatus == false) {
+    content = <MainModal />
+  } else if (dataRequestStatus == true) {
+    content = <WaterdataComponent />
+  }
+
+  return (
+    <View style={styles.container}>
+      <Header />
+      {content}
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: "100%",
-        height: "100%",
-        flexDirection: "column",
-        backgroundColor: styleConstants.colors.darkGrey
-    }
+  container: {
+    width: "100%",
+    height: "100%",
+    flexDirection: "column",
+    backgroundColor: styleConstants.colors.darkGrey
+  }
 });

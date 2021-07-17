@@ -8,11 +8,11 @@ import { Ionicons } from '@expo/vector-icons';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { dataStoreRegionKey, dataStoreWatershedKey, setData, getData } from "../../lib/helper/AsyncHelper";
 import { getRegionSource, getWatershedSource } from "../../lib/helper/Helper";
-import Waterdata from "../../lib/datasource/waterdata";
-import styleConstants from "../../assets/style-constants";
+import Waterdata from "../../lib/datasource/waterdata.json";
+import styleConstants from "../../assets/style-constants.json";
 
-class LocationSettings extends Component {
-    constructor(props) {
+class LocationSettings extends React.Component<{}, { selectedRegion: any, savedRegion: any, selectedWatershed: any, savedWatershed: any, isCollapsed: boolean, transactionInProgress: boolean }> {
+    constructor(props: {}) {
         super(props);
         this.state = {
             selectedRegion: null,
@@ -26,17 +26,17 @@ class LocationSettings extends Component {
     }
 
     _componentWillMount() {
-        getData(dataStoreRegionKey).then((response) => {
-            if (response != null) {
+        getData(dataStoreRegionKey).then((regionResponse: any) => {
+            if (regionResponse != null) {
                 if (this.state.selectedRegion == null) {
-                    this.state.selectedRegion = response;
-                    // console.log("@LocationSettings._componentDidMount",response);
+                    this.setSelectedRegion(regionResponse);
+                    console.log("@LocationSettings._componentDidMount",regionResponse);
                 }
-                getData(dataStoreWatershedKey).then((_response) => {
-                    if (_response != null) {
+                getData(dataStoreWatershedKey).then((watershedResponse) => {
+                    if (watershedResponse != null) {
                         if (this.state.selectedWatershed == null) {
-                            this.state.selectedWatershed = _response;
-                            // console.log("@LocationSettings._componentDidMount",_response);
+                            this.setSelectedWatershed(watershedResponse);
+                            console.log("@LocationSettings._componentDidMount",watershedResponse);
                         }
                     }
                 });
@@ -44,18 +44,25 @@ class LocationSettings extends Component {
         });
     }
 
-    componentWillUnmount() {
-        // console.log("LocationSettings.componentWillUnmount()");
-    }
-
     /**
      * picker data functions
+     * @params val string | null
      */
-    setSelectedRegion(val) {
+    setSelectedRegion(val: string | null) {
+        if(val == "no selection"){
+            val = null;
+        }
         return this.setState({ selectedRegion: val });
     }
 
-    setSelectedWatershed(val) {
+    /**
+     * @params val string | null
+     */
+    setSelectedWatershed(val: string | null) {
+        console.log("@LocationSettings.setSelectedWatershed", val);
+        if(val == "no selection"){
+            val = null;
+        }
         return this.setState({ selectedWatershed: val });
     }
 
@@ -69,21 +76,21 @@ class LocationSettings extends Component {
         return this._getPickerItems(regionSource);
     }
 
-    _getPickerItems(source) {
-        let items = source.map((sourceItem, i) => {
-            return <Picker.Item label={sourceItem.label} value={sourceItem.value} key={i} color={styleConstants.fonts.bodyFontColor} />
+    _getPickerItems(source: any) {
+        let items = source.map((sourceItem: { label: string; value: string; }, i: React.Key) => {
+                return <Picker.Item label={sourceItem.label} value={sourceItem.value} key={i} color={styleConstants.fonts.bodyFontColor} />
         });
         return items;
     }
 
-    setIsCollapsedHandler(val) {
+    setIsCollapsedHandler(val: boolean) {
         if (typeof val !== "boolean") {
             val = false;
         }
         this.setState({ isCollapsed: val });
     }
 
-    toggleStatuesIndicator(status = false) {
+    toggleStatusIndicator(status = false) {
         switch (status) {
             case true:
                 this.setState({ transactionInProgress: true });
@@ -96,7 +103,7 @@ class LocationSettings extends Component {
     }
 
     saveSettings() {
-        this.toggleStatuesIndicator(true);
+        this.toggleStatusIndicator(true);
         let region = setData(dataStoreRegionKey, this.state.selectedRegion);
         region.then((res) => {
             if (res == true) {
@@ -104,7 +111,7 @@ class LocationSettings extends Component {
                 watershed.then((_res) => {
                     if (_res == true) {
                         setTimeout(() => {
-                            this.toggleStatuesIndicator(false);
+                            this.toggleStatusIndicator(false);
                         }, 1000);
                     }
                 });
@@ -163,7 +170,7 @@ class LocationSettings extends Component {
                                 this.setSelectedRegion(val);
                             }}
                         >
-                            <Picker.Item label="-- select a region --" value={null} color={"white"} />
+                            <Picker.Item label="-- select a region --" value={"no selection"} color={"white"} />
                             {this.getRegionPickerItems()}
                         </Picker>
                     </View>
@@ -178,21 +185,21 @@ class LocationSettings extends Component {
                                 this.setSelectedWatershed(val);
                             }}
                         >
-                            <Picker.Item label="-- select a watershed --" value={null} color={"white"} />
+                            <Picker.Item label="-- select a watershed --" value={"no selection"} color={"white"} />
                             {this.getWatershedPickerItems()}
                         </Picker>
                     </View>
-                    <View styles={styles.button}>
+                    <View>
                         <TouchableOpacity
                             style={styles.button}
                             onPress={() => {
                                 this.saveSettings();
                             }}
-                            underlayColor={styleConstants.colors.burntOrange} >
+                        >
                             <Text style={styles.buttonText}>Save Location Settings</Text>
                         </TouchableOpacity>
                     </View>
-                    <View styles={styles.button}>
+                    <View>
                         <TouchableOpacity
                             style={styles.buttonDanger}
                             onPress={() => {
@@ -201,7 +208,7 @@ class LocationSettings extends Component {
                                 this.setSelectedRegion(null);
                                 this.setSelectedWatershed(null);
                             }}
-                            underlayColor={styleConstants.colors.dangerRed} >
+                        >
                             <Text style={styles.buttonText}>Reset Location Settings</Text>
                         </TouchableOpacity>
                     </View>
@@ -250,6 +257,7 @@ const styles = StyleSheet.create({
         width: "100%",
         alignSelf: 'stretch',
         marginTop: 10,
+        marginBottom: 10,
         paddingTop: 10,
         paddingBottom: 10,
         backgroundColor: styleConstants.colors.burntOrange,
@@ -274,7 +282,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         paddingLeft: 10,
         paddingRight: 10,
-        fontFamily: styleConstants.headerFontFamily,
+        fontFamily: styleConstants.fonts.headerFontFamily,
         fontSize: 20
     },
     spinnerTextStyle: {

@@ -2,9 +2,9 @@
 
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import styleConstants from "../../assets/style-constants";
+import styleConstants from "../../assets/style-constants.json";
 
-export default function MainLoadingScreen(props){
+export default function MainLoadingScreen(props:{text:string}){
 
     let content = props.text;
 

@@ -1,25 +1,33 @@
 "use strict";
 
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, Text } from "react-native";
+
 import { useSelector, useDispatch } from "react-redux";
-import WaterdataCard from "./WaterdataCard";
+import { RootState } from "../../lib/store/reducers/rootReducer";
 import { setRequestWaterdata } from "../../lib/store/actions/waterdata";
 
-const WaterdataComponent = () => {
+import Collapsible from 'react-native-collapsible';
+
+import WaterdataCard from "./WaterdataCard";
+
+export default function WaterdataComponent(){
 
     const dispatch = useDispatch();
-    const region = useSelector(state => state.waterdata.region);
-    const watershed = useSelector(state => state.waterdata.watershed);
-    const source = useSelector(state => state.waterdata.source);
+    const region = useSelector((state: RootState) => state.waterdata.region);
+    const watershed = useSelector((state: RootState) => state.waterdata.watershed);
+    const source = useSelector((state: RootState) => state.waterdata.source);
 
-    /**
+     /**
      * 
      * 
      */
-    const getWatershedData = () => {
-        let data = source.region[region].watershed || {};
-        let _watershedData = {};
+      const getWatershedData = () => {
+        if(region == null){
+            return [];
+        }
+        let _watershedData = [];
+        let data = source.region[region].watershed || [];
         for (let key in data) {
             if (data.hasOwnProperty(key)) {
                 if (data[key].name === watershed && typeof data[key].sites === "object") {
@@ -34,7 +42,7 @@ const WaterdataComponent = () => {
      * 
      * 
      */
-    const getWaterdataInsts = () => {
+     const getWaterdataInsts = () => {
         const watershedData = getWatershedData();
         let _content = [],
             i = 0;
@@ -49,7 +57,8 @@ const WaterdataComponent = () => {
     };
 
     return (
-        <ScrollView>{getWaterdataInsts()}</ScrollView>
+        <ScrollView>
+            {getWaterdataInsts()}
+        </ScrollView>
     );
 }
-export default WaterdataComponent;
