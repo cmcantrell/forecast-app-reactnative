@@ -77,14 +77,12 @@ const WaterdataCard = (props: { inst: number }) => {
                         let parsedData = parseWaterDataResponse(requestData, j),
                             currentData = null;
                         if (typeof parsedData.forEach != "function") {
-                            console.log("foreach is not a function");
                             responseData.status = 4;
                             return setResponseData(responseData);
                         }
                         parsedData.forEach((d) => {
                             if (Object.keys(d)[0] == "_0hr") {
                                 currentData = (d[Object.keys(d)[0]]);
-                                // console.log("currentData",currentData);
                                 responseData.currentMeasurementValue = currentData.measurementValue;
                                 responseData.currentMeasurementType = currentData.measurementType;
                                 if (responseData.currentMeasurementType == "acft" || responseData.currentMeasurementType == "ac-ft") {
@@ -105,13 +103,13 @@ const WaterdataCard = (props: { inst: number }) => {
                         responseData.status = 4;
                         setResponseData(responseData);
                     }).catch((err) => {
-                        console.log("ERROR1", err, requestData);
+                        console.log("ERROR: @WaterdataCard.apiRequest() json parse error", err, requestData);
                         responseData.error = err,
                             responseData.status = 4;
                         setResponseData(responseData);
                     });
                 }).catch((err) => {
-                    console.log("ERROR2", err, requestData);
+                    console.log("ERROR: @WaterdataCard.apiRequest() fetch error", err, requestData);
                     responseData.error = err,
                         responseData.status = 4;
                     setResponseData(responseData);
@@ -368,7 +366,6 @@ const WaterdataCard = (props: { inst: number }) => {
      * 
      */
     const renderCollapsableContent = () => {
-        // console.log(responseData)
         let _styles = styles.bottomViewContainer;
         if (typeof responseData.mapPoints != "object" || responseData.mapPoints.constructor.name != "Array" || responseData.mapPoints.length <= 1) {
             // if map points don't exist, make this view shorter
@@ -415,7 +412,6 @@ const WaterdataCard = (props: { inst: number }) => {
     };
 
     if (typeof responseData == "object" && responseData.status > 0) {
-        console.log("@render if", `isCollapsed: ${isCollapsed}`);
         if (isCollapsed == false) {
             collapsabelIconColor = "rgb(115,60,26)";
         }
